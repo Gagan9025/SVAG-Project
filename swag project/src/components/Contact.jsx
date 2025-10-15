@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import SectionTitle from './SectionTitle';
+// Removed SectionTitle import
 import { FiPhone, FiMail, FiSend } from 'react-icons/fi';
 
 const Contact = () => {
@@ -28,12 +28,19 @@ const Contact = () => {
     <section id="contact" className="py-20 relative">
       <div className="absolute inset-0 bg-gradient-to-b from-royal-dark to-royal-blue z-0"></div>
       <div className="container mx-auto px-4 relative z-10">
-        <SectionTitle 
-          title="Ready to Start?" 
-          subtitle="Ready to transform your business with creativity and strategy? Let's discuss your project and create something amazing together."
-          data-aos="fade-up"
-          data-aos-delay="200"
-        />
+        {/* Custom bold heading for "Ready to Start?" */}
+        <div className="mb-16 text-center">
+          <h2 className="text-4xl md:text-5xl font-extrabold mb-4 relative inline-block font-heading text-gold-400">
+            READY TO START?
+            <span className="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-gold-400 to-transparent"></span>
+          </h2>
+          <div className="flex justify-center my-4">
+            <div className="w-8 h-1 bg-gold-400 rounded-full"></div>
+          </div>
+          <p className="text-xl text-gold-300 mt-4 max-w-3xl mx-auto font-sans">
+            Ready to transform your business with creativity and strategy? Let's discuss your project and create something amazing together.
+          </p>
+        </div>
         
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
           <div 

@@ -7,22 +7,38 @@
 @layer base {
   body {
     @apply bg-royal-dark text-silver-800 font-sans;
-    overflow: hidden;
+    overflow-x: hidden;
+    overflow-y: scroll; /* Changed from auto to scroll to ensure consistent scrollbar */
   }
   
-  /* Hide scrollbar for Webkit browsers (Chrome, Safari) */
+  /* Custom vertical scrollbar styling for Webkit browsers */
   ::-webkit-scrollbar {
-    display: none;
+    width: 8px;
   }
   
-  /* Hide scrollbar for Firefox */
+  ::-webkit-scrollbar-track {
+    background: rgba(26, 26, 46, 0.5);
+    border-radius: 4px;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background: #ffd724;
+    border-radius: 4px;
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    background: #e6c200;
+  }
+  
+  /* Firefox scrollbar */
   html {
-    scrollbar-width: none;
+    scrollbar-width: thin;
+    scrollbar-color: #ffd724 rgba(26, 26, 46, 0.5);
   }
   
-  /* Hide scrollbar for IE and Edge */
+  /* Ensure consistent scrollbar for IE and Edge */
   body {
-    -ms-overflow-style: none;
+    -ms-overflow-style: scrollbar;
   }
   
   h1, h2, h3, h4, h5, h6 {
@@ -180,14 +196,15 @@
     }
   }
   
+  /* Simplified float animation for better performance */
   @keyframes float {
     0% {
       transform: translateY(0) translateX(0);
       opacity: 0.3;
     }
     50% {
-      transform: translateY(-20px) translateX(10px);
-      opacity: 0.6;
+      transform: translateY(-10px) translateX(5px);
+      opacity: 0.5;
     }
     100% {
       transform: translateY(0) translateX(0);
@@ -195,26 +212,18 @@
     }
   }
   
-  /* New enhanced floating animation */
+  /* Simplified floatEnhanced animation */
   @keyframes floatEnhanced {
     0% {
-      transform: translate(0, 0) rotate(0deg);
+      transform: translate(0, 0);
       opacity: 0.2;
     }
-    25% {
-      transform: translate(20px, -15px) rotate(5deg);
+    50% {
+      transform: translate(10px, -5px);
       opacity: 0.4;
     }
-    50% {
-      transform: translate(40px, 10px) rotate(10deg);
-      opacity: 0.3;
-    }
-    75% {
-      transform: translate(20px, 25px) rotate(5deg);
-      opacity: 0.5;
-    }
     100% {
-      transform: translate(0, 0) rotate(0deg);
+      transform: translate(0, 0);
       opacity: 0.2;
     }
   }
@@ -229,38 +238,31 @@
     }
   }
   
-  /* Gentle pulsing animation */
+  /* Simplified gentlePulse animation */
   @keyframes gentlePulse {
-    0% {
+    0%, 100% {
       transform: scale(1);
       opacity: 0.3;
     }
     50% {
-      transform: scale(1.05);
+      transform: scale(1.02);
       opacity: 0.5;
-    }
-    100% {
-      transform: scale(1);
-      opacity: 0.3;
     }
   }
   
-  /* Drifting animation */
+  /* Simplified drift animation */
   @keyframes drift {
-    0% {
+    0%, 100% {
       transform: translate(0, 0);
     }
     25% {
-      transform: translate(10px, 5px);
+      transform: translate(5px, 2px);
     }
     50% {
-      transform: translate(20px, 0);
+      transform: translate(10px, 0);
     }
     75% {
-      transform: translate(10px, -5px);
-    }
-    100% {
-      transform: translate(0, 0);
+      transform: translate(5px, -2px);
     }
   }
   
@@ -290,41 +292,11 @@
     z-index: -1;
     overflow: hidden;
     background: #0F0F1A;
-  }
-  
-  /* Enhanced gradient overlay */
-  .gradient-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(
-      125deg,
-      rgba(15, 15, 26, 0.9) 0%,
-      rgba(26, 26, 46, 0.7) 25%,
-      rgba(37, 27, 90, 0.5) 50%,
-      rgba(26, 26, 46, 0.7) 75%,
-      rgba(15, 15, 26, 0.9) 100%
-    );
-    animation: flowWave 20s linear infinite;
-    background-size: 200% 200%;
-    opacity: 0.7;
-  }
-  
-  /* Flowing lines */
-  .flowing-lines {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-image: 
-      linear-gradient(90deg, transparent 49%, rgba(250, 204, 21, 0.1) 50%, transparent 51%),
-      linear-gradient(transparent 49%, rgba(250, 204, 21, 0.1) 50%, transparent 51%);
-    background-size: 100px 100px;
-    animation: flowWave 30s linear infinite;
-    opacity: 0.2;
+    /* Performance optimizations */
+    transform: translateZ(0);
+    will-change: transform;
+    /* Reduced animation speeds */
+    animation-play-state: running;
   }
   
   /* Particles */
@@ -333,9 +305,11 @@
     border-radius: 50%;
     background: radial-gradient(circle, rgba(255,215,0,0.5) 0%, transparent 70%);
     pointer-events: none;
-    /* Ensure particles don't cause overflow */
+    /* Performance optimizations */
     transform: translateZ(0);
     will-change: transform;
+    /* Simplified animations for better performance */
+    animation-timing-function: linear;
   }
   
   .particle-1 {
@@ -418,9 +392,11 @@
     background: radial-gradient(circle, rgba(250, 204, 21, 0.8) 0%, rgba(250, 204, 21, 0.2) 70%, transparent 100%);
     pointer-events: none;
     filter: blur(1px);
-    /* Ensure orbs don't cause overflow */
+    /* Performance optimizations */
     transform: translateZ(0);
     will-change: transform;
+    /* Simplified animations for better performance */
+    animation-timing-function: linear;
   }
   
   .orb-1 {

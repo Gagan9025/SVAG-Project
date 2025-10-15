@@ -1,15 +1,24 @@
 import React from 'react';
-import SectionTitle from './SectionTitle';
+// Removed SectionTitle import
 
 const About = () => {
   return (
     <section id="about" className="py-20 relative">
       <div className="absolute inset-0 bg-gradient-to-b from-royal-dark to-royal-blue z-0"></div>
       <div className="container mx-auto px-4 relative z-10">
-        <SectionTitle 
-          title="Our Mission" 
-          subtitle="Empowering Business Growth Through Creative Excellence"
-        />
+        {/* Custom bold heading for "Our Mission" */}
+        <div className="mb-16">
+          <h2 className="text-4xl md:text-5xl font-extrabold mb-4 relative inline-block font-heading text-gold-400">
+            OUR MISSION
+            <span className="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-gold-400 to-transparent"></span>
+          </h2>
+          <div className="flex justify-center my-4">
+            <div className="w-8 h-1 bg-gold-400 rounded-full"></div>
+          </div>
+          <p className="text-xl text-gold-300 mt-4 max-w-3xl mx-auto font-sans">
+            Empowering Business Growth Through Creative Excellence
+          </p>
+        </div>
         
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center mb-16">
           <div

@@ -1,5 +1,5 @@
 import React from 'react';
-import SectionTitle from './SectionTitle';
+// Removed SectionTitle import
 import { FiArrowRight, FiBox, FiGlobe, FiBarChart2, FiFilm } from 'react-icons/fi';
 
 const Services = () => {
@@ -38,10 +38,19 @@ const Services = () => {
     <section id="services" className="py-20 relative">
       <div className="absolute inset-0 bg-gradient-to-b from-royal-blue to-royal-dark z-0"></div>
       <div className="container mx-auto px-4 relative z-10">
-        <SectionTitle 
-          title="Our Core Services" 
-          subtitle="Comprehensive solutions that drive measurable business growth and create lasting impact"
-        />
+        {/* Custom bold heading for "Our Core Services" */}
+        <div className="mb-16 text-center">
+          <h2 className="text-4xl md:text-5xl font-extrabold mb-4 relative inline-block font-heading text-gold-400">
+            OUR CORE SERVICES
+            <span className="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-gold-400 to-transparent"></span>
+          </h2>
+          <div className="flex justify-center my-4">
+            <div className="w-8 h-1 bg-gold-400 rounded-full"></div>
+          </div>
+          <p className="text-xl text-gold-300 mt-4 max-w-3xl mx-auto font-sans">
+            Comprehensive solutions that drive measurable business growth and create lasting impact
+          </p>
+        </div>
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {services.map((service, index) => (
