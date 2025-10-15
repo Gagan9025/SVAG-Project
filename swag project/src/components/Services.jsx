@@ -91,7 +91,16 @@ const Services = () => {
           data-aos="fade-up"
           data-aos-delay="700"
         >
-          <h3 className="text-3xl font-bold mb-6">Ready to Elevate Your Brand?</h3>
+          {/* Aligned "Ready to Start?" heading with consistent styling */}
+          <div className="mb-8">
+            <h3 className="text-3xl md:text-4xl font-extrabold mb-4 relative inline-block font-heading text-gold-400">
+              READY TO START?
+              <span className="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-gold-400 to-transparent"></span>
+            </h3>
+            <div className="flex justify-center my-4">
+              <div className="w-8 h-1 bg-gold-400 rounded-full"></div>
+            </div>
+          </div>
           <p className="text-xl text-silver-400 mb-8 max-w-3xl mx-auto">
             Let's discuss your project and create something amazing together.
           </p>
