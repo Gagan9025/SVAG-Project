@@ -7,8 +7,22 @@
 @layer base {
   body {
     @apply bg-royal-dark text-silver-800 font-sans;
-    overflow-x: hidden;
-    overflow-y: auto;
+    overflow: hidden;
+  }
+  
+  /* Hide scrollbar for Webkit browsers (Chrome, Safari) */
+  ::-webkit-scrollbar {
+    display: none;
+  }
+  
+  /* Hide scrollbar for Firefox */
+  html {
+    scrollbar-width: none;
+  }
+  
+  /* Hide scrollbar for IE and Edge */
+  body {
+    -ms-overflow-style: none;
   }
   
   h1, h2, h3, h4, h5, h6 {

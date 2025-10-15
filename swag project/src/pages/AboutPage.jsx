@@ -6,9 +6,9 @@ import BackToTop from '../components/BackToTop';
 
 const AboutPage = () => {
   return (
-    <div className="bg-royal-dark text-silver-800 font-sans relative overflow-x-hidden">
+    <div className="bg-royal-dark text-silver-800 font-sans relative h-screen overflow-hidden">
       {/* Animated background with floating particles */}
-      <div className="animated-background">
+      <div className="animated-background overflow-hidden">
         <div className="particle particle-1"></div>
         <div className="particle particle-2"></div>
         <div className="particle particle-3"></div>
@@ -18,7 +18,7 @@ const AboutPage = () => {
       </div>
       
       <Navbar />
-      <main className="pt-20">
+      <main className="pt-20 overflow-y-auto h-screen pb-20">
         <About />
       </main>
       <Footer />

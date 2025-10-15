@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 const Logo = () => {
   return (
-    <Link to="/" className="flex items-center space-x-2 glow-pulse">
+    <Link to="/" className="flex items-center space-x-2">
       {/* Your exact logo */}
       <img src="/logo.jpg" alt="SVAG Design Hub" className="h-10 w-auto object-contain rounded-lg" />
       

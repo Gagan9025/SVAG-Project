@@ -3,7 +3,7 @@ import { FiArrowRight, FiBox, FiGlobe, FiSmartphone, FiFilm } from 'react-icons/
 
 const Hero = () => {
   return (
-    <section id="home" className="relative min-h-screen flex items-center overflow-hidden overflow-y-hidden">
+    <section id="home" className="relative h-screen flex items-center overflow-hidden">
       {/* Clean background */}
       <div className="absolute inset-0 bg-royal-gradient z-0"></div>
       
