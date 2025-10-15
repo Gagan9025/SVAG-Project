@@ -6,6 +6,7 @@ import { FiBox, FiCode, FiBarChart2, FiFilm, FiX, FiMonitor, FiSmartphone, FiTre
 
 const ServicesPage = () => {
   const [selectedService, setSelectedService] = useState(null);
+  const [filteredServices, setFilteredServices] = useState(null);
 
   // All Services data
   const allServices = [
@@ -59,6 +60,18 @@ const ServicesPage = () => {
     setSelectedService(null);
   };
 
+  const filterServices = (serviceTitle) => {
+    if (serviceTitle === 'All Services') {
+      setFilteredServices(null);
+    } else {
+      const filtered = allServices.filter(service => service.title === serviceTitle);
+      setFilteredServices(filtered);
+    }
+  };
+
+  // Get services to display (filtered or all)
+  const servicesToDisplay = filteredServices || allServices;
+
   return (
     <div className="bg-royal-dark text-silver-800 font-sans relative min-h-screen flex flex-col">
       {/* Simplified animated background */}
@@ -83,10 +96,33 @@ const ServicesPage = () => {
               <p className="text-xl text-gold-300 mt-4 max-w-3xl mx-auto font-sans">
                 Comprehensive digital solutions to elevate your brand and drive growth
               </p>
+              
+              {/* Service Filter Buttons */}
+              <div className="flex flex-wrap justify-center gap-4 mt-10">
+                <button 
+                  onClick={() => filterServices('All Services')}
+                  className={`btn-royal-gold px-6 py-3 text-sm md:text-base ${filteredServices === null ? 'ring-2 ring-gold-400' : ''}`}
+                  data-aos="fade-up"
+                  data-aos-delay="300"
+                >
+                  ALL SERVICES
+                </button>
+                {allServices.map((service, index) => (
+                  <button 
+                    key={service.id}
+                    onClick={() => filterServices(service.title)}
+                    className={`btn-royal-gold px-6 py-3 text-sm md:text-base ${filteredServices && filteredServices[0]?.id === service.id ? 'ring-2 ring-gold-400' : ''}`}
+                    data-aos="fade-up"
+                    data-aos-delay={350 + index * 50}
+                  >
+                    {service.title.toUpperCase()}
+                  </button>
+                ))}
+              </div>
             </div>
             
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {allServices.map((service, index) => (
+              {servicesToDisplay.map((service, index) => (
                 <div
                   key={service.id}
                   className="card-glass h-full hover:scale-105 transition-transform duration-300 cursor-pointer"

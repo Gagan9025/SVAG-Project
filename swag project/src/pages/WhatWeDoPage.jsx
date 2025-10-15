@@ -5,34 +5,6 @@ import Footer from '../components/Footer';
 import BackToTop from '../components/BackToTop';
 
 const WhatWeDoPage = () => {
-  // Digital and Print services data
-  const digitalPrintServices = [
-    {
-      title: "Digital",
-      description: "Online and digital solutions to enhance your brand presence",
-      features: [
-        "Web Design & Development",
-        "Digital Marketing",
-        "Social Media Management",
-        "SEO Optimization",
-        "Email Campaigns"
-      ],
-      icon: "💻"
-    },
-    {
-      title: "Print",
-      description: "Traditional print materials that make a lasting impression",
-      features: [
-        "Business Cards",
-        "Brochures",
-        "Posters & Flyers",
-        "Packaging Design",
-        "Stationery"
-      ],
-      icon: "🖨️"
-    }
-  ];
-
   // What We Do sections data
   const whatWeDoSections = [
     {
@@ -49,13 +21,13 @@ const WhatWeDoPage = () => {
     },
     {
       title: "Digital Marketing",
-      description: "We create data-driven marketing strategies that increase your online visibility and drive targeted traffic to your business.",
+      description: "We create data-driven marketing strategies that boost your online presence and drive growth.",
       details: "Our digital marketing services include SEO optimization, content marketing, social media management, and paid advertising campaigns. We focus on understanding your audience and creating compelling content that attracts, engages, and converts. Our team continuously monitors and optimizes campaigns to maximize ROI.",
       icon: "📈"
     },
     {
       title: "Motion Design & Animation",
-      description: "We produce engaging animations and motion graphics that bring your brand stories to life and captivate your audience.",
+      description: "We produce engaging animations and motion graphics that bring your brand stories to life.",
       details: "From explainer videos to social media animations, our motion design services enhance your digital presence with dynamic visual content. We specialize in creating custom animations that align with your brand identity and communicate your message effectively across various platforms.",
       icon: "🎬"
     }
@@ -119,53 +91,26 @@ const WhatWeDoPage = () => {
               <p className="text-xl md:text-2xl text-gold-300 mt-8 max-w-3xl mx-auto font-sans leading-relaxed" data-aos="fade-up" data-aos-delay="200">
                 We blend creativity with technology to deliver innovative digital solutions that drive growth and transform businesses.
               </p>
-            </div>
-          </div>
-        </section>
-
-        {/* Digital & Print Services Section */}
-        <section className="py-20 relative">
-          <div className="absolute inset-0 bg-gradient-to-b from-royal-blue to-royal-dark z-0"></div>
-          <div className="container mx-auto px-4 relative z-10">
-            <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-extrabold mb-4 relative inline-block font-heading text-gold-400">
-                DIGITAL & PRINT
-                <span className="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-gold-400 to-transparent"></span>
-              </h2>
-              <div className="flex justify-center my-4">
-                <div className="w-8 h-1 bg-gold-400 rounded-full"></div>
-              </div>
-              <p className="text-xl text-gold-300 mt-4 max-w-3xl mx-auto font-sans">
-                Comprehensive solutions across both digital and traditional media
-              </p>
-            </div>
-            
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              {digitalPrintServices.map((service, index) => (
+              
+              {/* Digital & Print Buttons */}
+              <div className="flex flex-col sm:flex-row justify-center gap-6 mt-12">
                 <Link 
-                  to={service.title === "Digital" ? "/digital-services" : "/print-services"}
-                  key={index}
-                  className="card-glass p-8 hover:scale-105 transition-transform duration-300 block"
+                  to="/digital-services"
+                  className="btn-royal-gold px-8 py-4 text-lg inline-block hover:scale-105 transition-transform duration-300"
                   data-aos="fade-up"
-                  data-aos-delay={200 + index * 100}
+                  data-aos-delay="300"
                 >
-                  <div className="flex items-start mb-6">
-                    <div className="text-4xl mr-4">{service.icon}</div>
-                    <div>
-                      <h3 className="text-2xl font-bold mb-2 text-ivory">{service.title}</h3>
-                      <p className="text-gold-400 font-medium">{service.description}</p>
-                    </div>
-                  </div>
-                  <ul className="space-y-2">
-                    {service.features.map((feature, idx) => (
-                      <li key={idx} className="flex items-center">
-                        <span className="text-gold-400 mr-2">✦</span>
-                        <span className="text-silver-300">{feature}</span>
-                      </li>
-                    ))}
-                  </ul>
+                  DIGITAL SERVICES
                 </Link>
-              ))}
+                <Link 
+                  to="/print-services"
+                  className="btn-royal-gold px-8 py-4 text-lg inline-block hover:scale-105 transition-transform duration-300"
+                  data-aos="fade-up"
+                  data-aos-delay="400"
+                >
+                  PRINT SERVICES
+                </Link>
+              </div>
             </div>
           </div>
         </section>
@@ -205,6 +150,59 @@ const WhatWeDoPage = () => {
                   <p className="text-silver-400">{section.details}</p>
                 </div>
               ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Modern Web Solutions Preview */}
+        <section className="py-20 relative">
+          <div className="absolute inset-0 bg-gradient-to-b from-royal-blue to-royal-dark z-0"></div>
+          <div className="container mx-auto px-4 relative z-10">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-extrabold mb-4 relative inline-block font-heading text-gold-400">
+                MODERN WEB SOLUTIONS
+                <span className="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-gold-400 to-transparent"></span>
+              </h2>
+              <div className="flex justify-center my-4">
+                <div className="w-8 h-1 bg-gold-400 rounded-full"></div>
+              </div>
+              <p className="text-xl text-gold-300 mt-4 max-w-3xl mx-auto font-sans">
+                In today's digital-first world, your website is often the first impression potential customers have of your business.
+              </p>
+            </div>
+            
+            <div className="max-w-4xl mx-auto">
+              <p className="text-silver-400 mb-8 text-lg">
+                We build websites that not only look stunning but also perform exceptionally, driving conversions and user engagement. Our web development approach combines cutting-edge technology with proven design principles to create websites that are fast, secure, and optimized for search engines.
+              </p>
+              
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+                <div className="card-glass p-6 text-center">
+                  <div className="text-3xl text-gold-400 mb-4">📱</div>
+                  <h3 className="text-xl font-bold text-ivory mb-2">Responsive Design</h3>
+                </div>
+                <div className="card-glass p-6 text-center">
+                  <div className="text-3xl text-gold-400 mb-4">🔍</div>
+                  <h3 className="text-xl font-bold text-ivory mb-2">SEO Optimized</h3>
+                </div>
+                <div className="card-glass p-6 text-center">
+                  <div className="text-3xl text-gold-400 mb-4">⚡</div>
+                  <h3 className="text-xl font-bold text-ivory mb-2">Fast Performance</h3>
+                </div>
+                <div className="card-glass p-6 text-center">
+                  <div className="text-3xl text-gold-400 mb-4">🔒</div>
+                  <h3 className="text-xl font-bold text-ivory mb-2">Secure & Reliable</h3>
+                </div>
+              </div>
+              
+              <div className="text-center">
+                <Link 
+                  to="/digital-services"
+                  className="btn-royal-gold px-8 py-4 text-lg inline-block hover:scale-105 transition-transform duration-300"
+                >
+                  LEARN MORE ABOUT OUR WEB SOLUTIONS
+                </Link>
+              </div>
             </div>
           </div>
         </section>
