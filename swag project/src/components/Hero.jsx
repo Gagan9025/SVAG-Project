@@ -18,8 +18,8 @@ const Hero = () => {
               data-aos="fade-up"
               data-aos-delay="300"
             >
-              <span className="block text-ivory">Crafting Tomorrow's</span>
-              <span className="block text-gold-400">Brands, Today</span>
+              <span className="block text-ivory">Innovation Meets</span>
+              <span className="block text-gold-400">Excellence</span>
             </h1>
             
             <p 
@@ -27,7 +27,7 @@ const Hero = () => {
               data-aos="fade-up"
               data-aos-delay="400"
             >
-              SVAG Design Hub—where branding, digital strategy, and motion converge to elevate your business.
+              Crafting Tomorrow's Brands, Today.
             </p>
             
             <p 
@@ -35,7 +35,7 @@ const Hero = () => {
               data-aos="fade-up"
               data-aos-delay="500"
             >
-              We transform ideas into powerful digital experiences that drive growth, build trust, and create lasting impact.
+              NextGen Design Hub—where branding, digital strategy, and motion converge to elevate your business.
             </p>
             
             <div 

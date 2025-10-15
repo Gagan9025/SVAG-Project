@@ -1,5 +1,4 @@
 import React from 'react';
-// Removed SectionTitle import
 import { FiArrowRight, FiBox, FiGlobe, FiBarChart2, FiFilm } from 'react-icons/fi';
 
 const Services = () => {
@@ -38,6 +37,13 @@ const Services = () => {
     <section id="services" className="py-20 relative">
       <div className="absolute inset-0 bg-gradient-to-b from-royal-blue to-royal-dark z-0"></div>
       <div className="container mx-auto px-4 relative z-10">
+        {/* Adding "Our Services" heading */}
+        <div className="text-center mb-4">
+          <h2 className="text-2xl md:text-3xl font-bold text-gold-400 font-heading">
+            OUR SERVICES
+          </h2>
+        </div>
+        
         {/* Custom bold heading for "Our Core Services" */}
         <div className="mb-16 text-center">
           <h2 className="text-4xl md:text-5xl font-extrabold mb-4 relative inline-block font-heading text-gold-400">

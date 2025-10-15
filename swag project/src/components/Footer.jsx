@@ -26,12 +26,11 @@ const Footer = () => {
             data-aos="fade-up"
             data-aos-delay="200"
           >
-            {/* Added your logo to the footer */}
             <div className="mb-6">
-              <img src="/logo.jpg" alt="SVAG Design Hub" className="h-12 w-auto object-contain mb-4" />
+              <img src="/logo.jpg" alt="NextGen Design Hub" className="h-12 w-auto object-contain mb-4" />
             </div>
             <p className="text-silver-400 mb-6">
-              Crafting Tomorrow's Brands, Today. Where branding, digital strategy, and motion converge to elevate your business.
+              NextGen Design Hub—where branding, digital strategy, and motion converge to elevate your business.
             </p>
             <div className="flex space-x-4">
               {[
@@ -103,7 +102,7 @@ const Footer = () => {
             <ul className="space-y-4 mb-8">
               {[
                 { icon: <FiPhone size={20} />, text: '+974 71455795' },
-                { icon: <FiMail size={20} />, text: 'Info@svagdesignhub.com' }
+                { icon: <FiMail size={20} />, text: 'Info@nextgendesignhub.com' }
               ].map((contact, index) => (
                 <li key={index} className="flex items-center">
                   <span className="text-gold-400 mr-3">{contact.icon}</span>
@@ -142,7 +141,7 @@ const Footer = () => {
         >
           <div className="flex flex-col md:flex-row justify-between items-center">
             <p className="text-silver-400 mb-4 md:mb-0">
-              Copyright © 2016-2025 SVAG
+              Copyright © 2016-2025 NEXTGEN
             </p>
             <div className="flex space-x-6">
               <a href="#" className="text-silver-400 hover:text-gold-400">

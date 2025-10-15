@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-// Removed SectionTitle import
 import { FiPhone, FiMail, FiSend } from 'react-icons/fi';
 
 const Contact = () => {
@@ -38,6 +37,9 @@ const Contact = () => {
             <div className="w-8 h-1 bg-gold-400 rounded-full"></div>
           </div>
           <p className="text-xl text-gold-300 mt-4 max-w-3xl mx-auto font-sans">
+            Ready to Elevate Your Brand?
+          </p>
+          <p className="text-lg text-silver-400 mt-4 max-w-3xl mx-auto font-sans">
             Ready to transform your business with creativity and strategy? Let's discuss your project and create something amazing together.
           </p>
         </div>
@@ -53,14 +55,18 @@ const Contact = () => {
               
               <div className="space-y-6 mb-8">
                 {[
+                  "Digital Consulting",
                   "Digital Strategy",
                   "Digital Transformation Consulting",
                   "Operational Excellence through Digitalisation",
+                  "Digital Marketing",
                   "Social Media Management",
                   "Online Marketing",
+                  "Web Development",
                   "Website Development",
                   "e-commerce Solutions",
                   "Website Re-designing",
+                  "Graphic & Video",
                   "Graphic Designing",
                   "Video Production and Editing"
                 ].map((service, index) => (
@@ -92,8 +98,28 @@ const Contact = () => {
                   data-aos-delay="1100"
                 >
                   <FiMail className="text-gold-400 mr-3 text-xl" />
-                  <span className="text-silver-300">Info@svagdesignhub.com</span>
+                  <span className="text-silver-300">Info@nextgendesignhub.com</span>
                 </div>
+              </div>
+              
+              <h3 className="text-2xl font-bold mt-8 mb-6 text-ivory">Company</h3>
+              <div className="space-y-4">
+                {[
+                  "Strategic Partnership",
+                  "CSR- Social Works",
+                  "Careers",
+                  "Privacy Policy"
+                ].map((item, index) => (
+                  <div 
+                    key={index} 
+                    className="flex items-center"
+                    data-aos="fade-up"
+                    data-aos-delay={1200 + index * 50}
+                  >
+                    <span className="text-gold-400 mr-3">✦</span>
+                    <span className="text-silver-300">{item}</span>
+                  </div>
+                ))}
               </div>
             </div>
           </div>
