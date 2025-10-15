@@ -3,7 +3,7 @@ import { FiArrowRight, FiBox, FiGlobe, FiSmartphone, FiFilm } from 'react-icons/
 
 const Hero = () => {
   return (
-    <section id="home" className="relative min-h-screen flex items-center overflow-hidden">
+    <section id="home" className="relative min-h-screen flex items-center overflow-hidden overflow-y-hidden">
       {/* Clean background */}
       <div className="absolute inset-0 bg-royal-gradient z-0"></div>
       
@@ -99,19 +99,7 @@ const Hero = () => {
         </div>
       </div>
       
-      {/* Scroll indicator */}
-      <div 
-        className="absolute bottom-10 left-1/2 transform -translate-x-1/2 text-ivory"
-        data-aos="fade-up"
-        data-aos-delay="1000"
-      >
-        <div className="flex flex-col items-center">
-          <span className="text-sm mb-2">Scroll to explore</span>
-          <div className="w-6 h-10 rounded-full border-2 border-gold-400 flex items-center justify-center animate-bounce">
-            <div className="w-1 h-3 bg-gold-400 rounded-full"></div>
-          </div>
-        </div>
-      </div>
+      {/* Scroll indicator removed as per user request */}
     </section>
   );
 };
