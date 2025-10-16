@@ -34,19 +34,19 @@ const Home = () => {
     {
       name: "Sarah Johnson",
       role: "CEO, TechInnovate",
-      content: "NextGen transformed our brand identity and helped us stand out in a crowded market. Their attention to detail and creative approach exceeded our expectations.",
+      content: "Swag transformed our brand identity and helped us stand out in a crowded market. Their attention to detail and creative approach exceeded our expectations.",
       avatar: "https://randomuser.me/api/portraits/women/32.jpg"
     },
     {
       name: "Michael Chen",
       role: "Founder, StartupHub",
-      content: "The website developed by NextGen has significantly increased our conversion rates. Their technical expertise combined with creative design is impressive.",
+      content: "The website developed by Swag has significantly increased our conversion rates. Their technical expertise combined with creative design is impressive.",
       avatar: "https://randomuser.me/api/portraits/men/54.jpg"
     },
     {
       name: "Emily Rodriguez",
       role: "Marketing Director, GrowthCo",
-      content: "Our social media engagement increased by 200% after implementing NextGen's digital marketing strategy. They truly understand how to connect with audiences.",
+      content: "Our social media engagement increased by 200% after implementing Swag's digital marketing strategy. They truly understand how to connect with audiences.",
       avatar: "https://randomuser.me/api/portraits/women/68.jpg"
     }
   ];

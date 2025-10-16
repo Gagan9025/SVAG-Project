@@ -27,10 +27,10 @@ const Footer = () => {
             data-aos-delay="200"
           >
             <div className="mb-6">
-              <img src="/logo.jpg" alt="NextGen Design Hub" className="h-12 w-auto object-contain mb-4" />
+              <img src="/logo.jpg" alt="Swag Design Hub" className="h-12 w-auto object-contain mb-4" />
             </div>
             <p className="text-silver-400 mb-6">
-              NextGen Design Hub—where branding, digital strategy, and motion converge to elevate your business.
+              Swag Design Hub—where branding, digital strategy, and motion converge to elevate your business.
             </p>
             <div className="flex space-x-4">
               {[
@@ -141,7 +141,7 @@ const Footer = () => {
         >
           <div className="flex flex-col md:flex-row justify-between items-center">
             <p className="text-silver-400 mb-4 md:mb-0">
-              Copyright © 2016-2025 NEXTGEN
+              Copyright © 2016-2025 SWAG
             </p>
             <div className="flex space-x-6">
               <a href="#" className="text-silver-400 hover:text-gold-400">

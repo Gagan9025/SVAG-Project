@@ -10,21 +10,21 @@ const Testimonials = () => {
       id: 1,
       name: "Sarah Johnson",
       role: "CEO, TechFlow Solutions",
-      content: "NextGen Design Hub transformed our brand identity completely. Their attention to detail and creative vision exceeded our expectations. Our new website has increased our conversion rates by 40%.",
+      content: "Swag Design Hub transformed our brand identity completely. Their attention to detail and creative vision exceeded our expectations. Our new website has increased our conversion rates by 40%.",
       avatar: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=200&q=80"
     },
     {
       id: 2,
       name: "Michael Chen",
       role: "Founder, InnovateLab",
-      content: "Working with NextGen was a game-changer for our startup. They understood our vision perfectly and delivered a stunning website that perfectly represents our innovative approach.",
+      content: "Working with Swag was a game-changer for our startup. They understood our vision perfectly and delivered a stunning website that perfectly represents our innovative approach.",
       avatar: "https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=200&q=80"
     },
     {
       id: 3,
       name: "Emily Rodriguez",
       role: "Marketing Director, StyleHub",
-      content: "The team at NextGen Design Hub is incredibly professional and talented. They delivered our e-commerce platform on time and within budget. Our customers love the new user experience!",
+      content: "The team at Swag Design Hub is incredibly professional and talented. They delivered our e-commerce platform on time and within budget. Our customers love the new user experience!",
       avatar: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=200&q=80"
     }
   ];
@@ -46,7 +46,7 @@ const Testimonials = () => {
             What Our Clients Say
           </p>
           <p className="text-lg text-silver-400 mt-4 max-w-3xl mx-auto font-sans">
-            Discover why leading brands trust NextGen Design Hub to transform their digital presence
+            Discover why leading brands trust Swag Design Hub to transform their digital presence
           </p>
         </div>
         

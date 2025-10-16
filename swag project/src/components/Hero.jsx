@@ -35,7 +35,7 @@ const Hero = () => {
               data-aos="fade-up"
               data-aos-delay="500"
             >
-              NextGen Design Hub—where branding, digital strategy, and motion converge to elevate your business.
+              Swag Design Hub—where branding, digital strategy, and motion converge to elevate your business.
             </p>
             
             <div 
