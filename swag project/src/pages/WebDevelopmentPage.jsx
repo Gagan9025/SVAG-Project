@@ -35,10 +35,20 @@ const WebDevelopmentPage = () => {
           </div>
         </section>
 
-        {/* Key Features */}
-        <section className="py-12 mobile:section-py relative">
+        {/* Key Features - Mobile Page Separation */}
+        <section className="py-12 mobile:section-py relative mobile-page-section">
           <div className="absolute inset-0 bg-gradient-to-b from-royal-dark to-royal-blue z-0"></div>
-          <div className="container mx-auto px-4 mobile:px-4 relative z-10">
+          <div className="container mx-auto px-4 mobile:px-0 relative z-10">
+            <div className="text-center mb-10">
+              <h2 className="mobile:page-title">KEY FEATURES</h2>
+              <div className="flex justify-center my-3">
+                <div className="w-8 h-1 bg-gold-400 rounded-full"></div>
+              </div>
+              <p className="text-lg mobile:text-xl text-gold-300 mt-4 max-w-2xl mx-auto font-sans">
+                Essential elements that make our web solutions stand out
+              </p>
+            </div>
+            
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mobile:gap-4">
               <div className="text-center p-5 mobile:p-4 card-glass" data-aos="fade-up">
                 <div className="text-3xl mobile:text-4xl text-gold-400 mb-3 mobile:mb-4">📱</div>
@@ -64,15 +74,12 @@ const WebDevelopmentPage = () => {
           </div>
         </section>
 
-        {/* Our Services */}
-        <section className="py-16 mobile:section-py relative">
+        {/* Our Services - Mobile Page Separation */}
+        <section className="py-16 mobile:section-py relative mobile-page-section">
           <div className="absolute inset-0 bg-gradient-to-b from-royal-blue to-royal-dark z-0"></div>
-          <div className="container mx-auto px-4 mobile:px-4 relative z-10">
+          <div className="container mx-auto px-4 mobile:px-0 relative z-10">
             <div className="text-center mb-12 mobile:mb-10">
-              <h2 className="text-2xl mobile:text-3xl md:text-4xl font-extrabold mb-4 relative inline-block font-heading text-gold-400">
-                OUR WEB DEVELOPMENT SERVICES
-                <span className="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-gold-400 to-transparent"></span>
-              </h2>
+              <h2 className="mobile:page-title">OUR WEB DEVELOPMENT SERVICES</h2>
               <div className="flex justify-center my-3">
                 <div className="w-8 h-1 bg-gold-400 rounded-full"></div>
               </div>
@@ -83,113 +90,113 @@ const WebDevelopmentPage = () => {
             
             <div className="space-y-10 mobile:space-y-8">
               {/* Custom Website Builds */}
-              <div className="card-glass p-6 mobile:p-5" data-aos="fade-up">
-                <h3 className="text-xl mobile:text-2xl md:text-3xl font-bold mb-4 text-ivory">Custom Website Builds</h3>
-                <p className="text-base mobile:text-lg text-silver-300 mb-5">Tailored websites designed for your specific business needs:</p>
-                <ul className="grid grid-cols-1 md:grid-cols-2 gap-3 mb-5">
-                  <li className="flex items-start">
+              <div className="card-glass p-6 mobile:p-5 mobile:content-block" data-aos="fade-up">
+                <h3 className="mobile:content-title">Custom Website Builds</h3>
+                <p className="mobile:content-text">Tailored websites designed for your specific business needs:</p>
+                <ul className="mobile:feature-list">
+                  <li className="mobile:feature-item flex items-start">
                     <span className="text-gold-400 mr-2 mt-1">✓</span>
-                    <span className="text-sm mobile:text-base text-silver-300">Custom design and development</span>
+                    <span className="text-silver-300">Custom design and development</span>
                   </li>
-                  <li className="flex items-start">
+                  <li className="mobile:feature-item flex items-start">
                     <span className="text-gold-400 mr-2 mt-1">✓</span>
-                    <span className="text-sm mobile:text-base text-silver-300">Responsive layouts for all devices</span>
+                    <span className="text-silver-300">Responsive layouts for all devices</span>
                   </li>
-                  <li className="flex items-start">
+                  <li className="mobile:feature-item flex items-start">
                     <span className="text-gold-400 mr-2 mt-1">✓</span>
-                    <span className="text-sm mobile:text-base text-silver-300">SEO-optimized structure</span>
+                    <span className="text-silver-300">SEO-optimized structure</span>
                   </li>
-                  <li className="flex items-start">
+                  <li className="mobile:feature-item flex items-start">
                     <span className="text-gold-400 mr-2 mt-1">✓</span>
-                    <span className="text-sm mobile:text-base text-silver-300">Content management systems</span>
+                    <span className="text-silver-300">Content management systems</span>
                   </li>
-                  <li className="flex items-start">
+                  <li className="mobile:feature-item flex items-start">
                     <span className="text-gold-400 mr-2 mt-1">✓</span>
-                    <span className="text-sm mobile:text-base text-silver-300">Performance optimization</span>
+                    <span className="text-silver-300">Performance optimization</span>
                   </li>
                 </ul>
               </div>
 
               {/* E-Commerce Solutions */}
-              <div className="card-glass p-6 mobile:p-5" data-aos="fade-up" data-aos-delay="100">
-                <h3 className="text-xl mobile:text-2xl md:text-3xl font-bold mb-4 text-ivory">E-Commerce Solutions</h3>
-                <p className="text-base mobile:text-lg text-silver-300 mb-5">Full-featured online stores that drive sales and growth:</p>
-                <ul className="grid grid-cols-1 md:grid-cols-2 gap-3 mb-5">
-                  <li className="flex items-start">
+              <div className="card-glass p-6 mobile:p-5 mobile:content-block" data-aos="fade-up" data-aos-delay="100">
+                <h3 className="mobile:content-title">E-Commerce Solutions</h3>
+                <p className="mobile:content-text">Full-featured online stores that drive sales and growth:</p>
+                <ul className="mobile:feature-list">
+                  <li className="mobile:feature-item flex items-start">
                     <span className="text-gold-400 mr-2 mt-1">✓</span>
-                    <span className="text-sm mobile:text-base text-silver-300">Secure payment gateways</span>
+                    <span className="text-silver-300">Secure payment gateways</span>
                   </li>
-                  <li className="flex items-start">
+                  <li className="mobile:feature-item flex items-start">
                     <span className="text-gold-400 mr-2 mt-1">✓</span>
-                    <span className="text-sm mobile:text-base text-silver-300">Inventory management systems</span>
+                    <span className="text-silver-300">Inventory management systems</span>
                   </li>
-                  <li className="flex items-start">
+                  <li className="mobile:feature-item flex items-start">
                     <span className="text-gold-400 mr-2 mt-1">✓</span>
-                    <span className="text-sm mobile:text-base text-silver-300">Order processing automation</span>
+                    <span className="text-silver-300">Order processing automation</span>
                   </li>
-                  <li className="flex items-start">
+                  <li className="mobile:feature-item flex items-start">
                     <span className="text-gold-400 mr-2 mt-1">✓</span>
-                    <span className="text-sm mobile:text-base text-silver-300">Customer account management</span>
+                    <span className="text-silver-300">Customer account management</span>
                   </li>
-                  <li className="flex items-start">
+                  <li className="mobile:feature-item flex items-start">
                     <span className="text-gold-400 mr-2 mt-1">✓</span>
-                    <span className="text-sm mobile:text-base text-silver-300">Analytics and reporting</span>
+                    <span className="text-silver-300">Analytics and reporting</span>
                   </li>
                 </ul>
               </div>
 
               {/* Site Redesign & UX Optimization */}
-              <div className="card-glass p-6 mobile:p-5" data-aos="fade-up" data-aos-delay="200">
-                <h3 className="text-xl mobile:text-2xl md:text-3xl font-bold mb-4 text-ivory">Site Redesign & UX Optimization</h3>
-                <p className="text-base mobile:text-lg text-silver-300 mb-5">Transform existing sites with modern design and user experience:</p>
-                <ul className="grid grid-cols-1 md:grid-cols-2 gap-3 mb-5">
-                  <li className="flex items-start">
+              <div className="card-glass p-6 mobile:p-5 mobile:content-block" data-aos="fade-up" data-aos-delay="200">
+                <h3 className="mobile:content-title">Site Redesign & UX Optimization</h3>
+                <p className="mobile:content-text">Transform existing sites with modern design and user experience:</p>
+                <ul className="mobile:feature-list">
+                  <li className="mobile:feature-item flex items-start">
                     <span className="text-gold-400 mr-2 mt-1">✓</span>
-                    <span className="text-sm mobile:text-base text-silver-300">User experience audits</span>
+                    <span className="text-silver-300">User experience audits</span>
                   </li>
-                  <li className="flex items-start">
+                  <li className="mobile:feature-item flex items-start">
                     <span className="text-gold-400 mr-2 mt-1">✓</span>
-                    <span className="text-sm mobile:text-base text-silver-300">Conversion rate optimization</span>
+                    <span className="text-silver-300">Conversion rate optimization</span>
                   </li>
-                  <li className="flex items-start">
+                  <li className="mobile:feature-item flex items-start">
                     <span className="text-gold-400 mr-2 mt-1">✓</span>
-                    <span className="text-sm mobile:text-base text-silver-300">Modern design implementation</span>
+                    <span className="text-silver-300">Modern design implementation</span>
                   </li>
-                  <li className="flex items-start">
+                  <li className="mobile:feature-item flex items-start">
                     <span className="text-gold-400 mr-2 mt-1">✓</span>
-                    <span className="text-sm mobile:text-base text-silver-300">Performance improvements</span>
+                    <span className="text-silver-300">Performance improvements</span>
                   </li>
-                  <li className="flex items-start">
+                  <li className="mobile:feature-item flex items-start">
                     <span className="text-gold-400 mr-2 mt-1">✓</span>
-                    <span className="text-sm mobile:text-base text-silver-300">Mobile-first approach</span>
+                    <span className="text-silver-300">Mobile-first approach</span>
                   </li>
                 </ul>
               </div>
 
               {/* Hosting, Maintenance & Performance Tuning */}
-              <div className="card-glass p-6 mobile:p-5" data-aos="fade-up" data-aos-delay="300">
-                <h3 className="text-xl mobile:text-2xl md:text-3xl font-bold mb-4 text-ivory">Hosting, Maintenance & Performance Tuning</h3>
-                <p className="text-base mobile:text-lg text-silver-300 mb-5">Complete web infrastructure management and optimization:</p>
-                <ul className="grid grid-cols-1 md:grid-cols-2 gap-3 mb-5">
-                  <li className="flex items-start">
+              <div className="card-glass p-6 mobile:p-5 mobile:content-block" data-aos="fade-up" data-aos-delay="300">
+                <h3 className="mobile:content-title">Hosting, Maintenance & Performance Tuning</h3>
+                <p className="mobile:content-text">Complete web infrastructure management and optimization:</p>
+                <ul className="mobile:feature-list">
+                  <li className="mobile:feature-item flex items-start">
                     <span className="text-gold-400 mr-2 mt-1">✓</span>
-                    <span className="text-sm mobile:text-base text-silver-300">Reliable hosting solutions</span>
+                    <span className="text-silver-300">Reliable hosting solutions</span>
                   </li>
-                  <li className="flex items-start">
+                  <li className="mobile:feature-item flex items-start">
                     <span className="text-gold-400 mr-2 mt-1">✓</span>
-                    <span className="text-sm mobile:text-base text-silver-300">Regular security updates</span>
+                    <span className="text-silver-300">Regular security updates</span>
                   </li>
-                  <li className="flex items-start">
+                  <li className="mobile:feature-item flex items-start">
                     <span className="text-gold-400 mr-2 mt-1">✓</span>
-                    <span className="text-sm mobile:text-base text-silver-300">Performance monitoring</span>
+                    <span className="text-silver-300">Performance monitoring</span>
                   </li>
-                  <li className="flex items-start">
+                  <li className="mobile:feature-item flex items-start">
                     <span className="text-gold-400 mr-2 mt-1">✓</span>
-                    <span className="text-sm mobile:text-base text-silver-300">Backup and recovery</span>
+                    <span className="text-silver-300">Backup and recovery</span>
                   </li>
-                  <li className="flex items-start">
+                  <li className="mobile:feature-item flex items-start">
                     <span className="text-gold-400 mr-2 mt-1">✓</span>
-                    <span className="text-sm mobile:text-base text-silver-300">24/7 technical support</span>
+                    <span className="text-silver-300">24/7 technical support</span>
                   </li>
                 </ul>
               </div>
@@ -197,15 +204,12 @@ const WebDevelopmentPage = () => {
           </div>
         </section>
 
-        {/* Tech Stack */}
-        <section className="py-16 mobile:section-py relative">
+        {/* Tech Stack - Mobile Page Separation */}
+        <section className="py-16 mobile:section-py relative mobile-page-section">
           <div className="absolute inset-0 bg-gradient-to-b from-royal-dark to-royal-blue z-0"></div>
-          <div className="container mx-auto px-4 mobile:px-4 relative z-10">
+          <div className="container mx-auto px-4 mobile:px-0 relative z-10">
             <div className="text-center mb-12 mobile:mb-10">
-              <h2 className="text-2xl mobile:text-3xl md:text-4xl font-extrabold mb-4 relative inline-block font-heading text-gold-400">
-                OUR TECHNOLOGY STACK
-                <span className="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-gold-400 to-transparent"></span>
-              </h2>
+              <h2 className="mobile:page-title">OUR TECHNOLOGY STACK</h2>
               <div className="flex justify-center my-3">
                 <div className="w-8 h-1 bg-gold-400 rounded-full"></div>
               </div>
@@ -235,15 +239,12 @@ const WebDevelopmentPage = () => {
           </div>
         </section>
 
-        {/* Our Process */}
-        <section className="py-16 mobile:section-py relative">
+        {/* Our Process - Mobile Page Separation */}
+        <section className="py-16 mobile:section-py relative mobile-page-section">
           <div className="absolute inset-0 bg-gradient-to-b from-royal-blue to-royal-dark z-0"></div>
-          <div className="container mx-auto px-4 mobile:px-4 relative z-10">
+          <div className="container mx-auto px-4 mobile:px-0 relative z-10">
             <div className="text-center mb-12 mobile:mb-10">
-              <h2 className="text-2xl mobile:text-3xl md:text-4xl font-extrabold mb-4 relative inline-block font-heading text-gold-400">
-                OUR DEVELOPMENT PROCESS
-                <span className="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-gold-400 to-transparent"></span>
-              </h2>
+              <h2 className="mobile:page-title">OUR DEVELOPMENT PROCESS</h2>
               <div className="flex justify-center my-3">
                 <div className="w-8 h-1 bg-gold-400 rounded-full"></div>
               </div>
@@ -277,15 +278,12 @@ const WebDevelopmentPage = () => {
           </div>
         </section>
 
-        {/* Why Choose Us */}
-        <section className="py-16 mobile:section-py relative">
+        {/* Why Choose Us - Mobile Page Separation */}
+        <section className="py-16 mobile:section-py relative mobile-page-section">
           <div className="absolute inset-0 bg-gradient-to-b from-royal-dark to-royal-blue z-0"></div>
-          <div className="container mx-auto px-4 mobile:px-4 relative z-10">
+          <div className="container mx-auto px-4 mobile:px-0 relative z-10">
             <div className="text-center mb-12 mobile:mb-10">
-              <h2 className="text-2xl mobile:text-3xl md:text-4xl font-extrabold mb-4 relative inline-block font-heading text-gold-400">
-                WHY CHOOSE SVAG FOR WEB DEVELOPMENT?
-                <span className="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-gold-400 to-transparent"></span>
-              </h2>
+              <h2 className="mobile:page-title">WHY CHOOSE SVAG FOR WEB DEVELOPMENT?</h2>
               <div className="flex justify-center my-3">
                 <div className="w-8 h-1 bg-gold-400 rounded-full"></div>
               </div>
@@ -314,14 +312,12 @@ const WebDevelopmentPage = () => {
           </div>
         </section>
 
-        {/* CTA Section */}
-        <section className="py-16 mobile:section-py relative">
+        {/* CTA Section - Mobile Page Separation */}
+        <section className="py-16 mobile:section-py relative mobile-page-section">
           <div className="absolute inset-0 bg-gradient-to-b from-royal-blue to-royal-dark z-0"></div>
-          <div className="container mx-auto px-4 mobile:px-4 relative z-10">
+          <div className="container mx-auto px-4 mobile:px-0 relative z-10">
             <div className="max-w-4xl mx-auto text-center">
-              <h2 className="text-2xl mobile:text-3xl md:text-4xl font-extrabold mb-5 font-heading text-gold-400" data-aos="fade-up">
-                READY TO BUILD YOUR ONLINE PRESENCE?
-              </h2>
+              <h2 className="mobile:page-title">READY TO BUILD YOUR ONLINE PRESENCE?</h2>
               <p className="text-lg mobile:text-xl text-gold-300 mt-4 mb-6 max-w-2xl mx-auto font-sans" data-aos="fade-up" data-aos-delay="100">
                 Let's discuss how our web development services can help you establish a powerful online presence that drives business growth.
               </p>

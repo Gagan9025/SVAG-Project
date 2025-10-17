@@ -100,15 +100,12 @@ const Home = () => {
       <main className="flex-grow">
         <Hero />
         
-        {/* About Section */}
-        <section className="py-16 mobile:section-py relative">
+        {/* About Section - Mobile Page Separation */}
+        <section className="py-16 mobile:section-py relative mobile-page-section">
           <div className="absolute inset-0 bg-gradient-to-b from-royal-dark to-royal-blue z-0"></div>
-          <div className="container mx-auto px-4 mobile:px-4 relative z-10">
+          <div className="container mx-auto px-4 mobile:px-0 relative z-10">
             <div className="max-w-4xl mx-auto text-center mb-12 mobile:mb-10">
-              <h2 className="text-2xl mobile:text-3xl md:text-4xl font-extrabold mb-4 relative inline-block font-heading text-gold-400">
-                WE TRANSFORM IDEAS INTO POWERFUL DIGITAL EXPERIENCES
-                <span className="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-gold-400 to-transparent"></span>
-              </h2>
+              <h2 className="mobile:page-title">WE TRANSFORM IDEAS INTO POWERFUL DIGITAL EXPERIENCES</h2>
               <div className="flex justify-center my-3">
                 <div className="w-8 h-1 bg-gold-400 rounded-full"></div>
               </div>
@@ -118,13 +115,13 @@ const Home = () => {
             </div>
             
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mobile:gap-6 max-w-6xl mx-auto">
-              <div className="card-glass p-6 mobile:p-5" data-aos="fade-right">
-                <h3 className="text-xl mobile:text-2xl font-bold mb-5 text-gold-400">Our Mission</h3>
+              <div className="card-glass p-6 mobile:p-5 mobile:content-block" data-aos="fade-right">
+                <h3 className="mobile:content-title">Our Mission</h3>
                 <h4 className="text-lg mobile:text-xl font-semibold mb-4 text-ivory">Empowering Business Growth Through Creative Excellence</h4>
-                <p className="text-silver-400 mb-5 text-sm mobile:text-base">
+                <p className="mobile:content-text">
                   We empower businesses through identity design, strategic digital solutions, tech-powered platforms, and animated storytelling—delivering impact that resonates.
                 </p>
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mt-4">
                   {['Strategic Design Thinking', 'Data-Driven Solutions', 'Innovation at Core', 'Business Strategy'].map((item, index) => (
                     <div key={index} className="flex items-center" data-aos="fade-up" data-aos-delay={100 * index}>
                       <span className="text-gold-400 mr-2">✦</span>
@@ -134,9 +131,9 @@ const Home = () => {
                 </div>
               </div>
               
-              <div className="card-glass p-6 mobile:p-5" data-aos="fade-left">
-                <h3 className="text-xl mobile:text-2xl font-bold mb-5 text-gold-400">Our Approach</h3>
-                <div className="grid grid-cols-1 gap-3">
+              <div className="card-glass p-6 mobile:p-5 mobile:content-block" data-aos="fade-left">
+                <h3 className="mobile:content-title">Our Approach</h3>
+                <div className="grid grid-cols-1 gap-3 mt-4">
                   {['Team Collaboration', 'Innovation Process', 'Creative Solutions'].map((item, index) => (
                     <div key={index} className="flex items-center" data-aos="fade-up" data-aos-delay={100 * index}>
                       <span className="text-gold-400 mr-2">✦</span>
@@ -149,15 +146,12 @@ const Home = () => {
           </div>
         </section>
 
-        {/* Services Section - Redesigned */}
-        <section className="py-16 mobile:section-py relative">
+        {/* Services Section - Mobile Page Separation */}
+        <section className="py-16 mobile:section-py relative mobile-page-section">
           <div className="absolute inset-0 bg-gradient-to-b from-royal-blue to-royal-dark z-0"></div>
-          <div className="container mx-auto px-4 mobile:px-4 relative z-10">
+          <div className="container mx-auto px-4 mobile:px-0 relative z-10">
             <div className="text-center mb-12 mobile:mb-10">
-              <h2 className="text-2xl mobile:text-3xl md:text-4xl font-extrabold mb-4 relative inline-block font-heading text-gold-400">
-                OUR CORE SERVICES
-                <span className="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-gold-400 to-transparent"></span>
-              </h2>
+              <h2 className="mobile:page-title">OUR CORE SERVICES</h2>
               <div className="flex justify-center my-3">
                 <div className="w-8 h-1 bg-gold-400 rounded-full"></div>
               </div>
@@ -301,15 +295,12 @@ const Home = () => {
           </div>
         </section>
 
-        {/* Portfolio Section */}
-        <section className="py-16 mobile:section-py relative">
+        {/* Portfolio Section - Mobile Page Separation */}
+        <section className="py-16 mobile:section-py relative mobile-page-section">
           <div className="absolute inset-0 bg-gradient-to-b from-royal-dark to-royal-blue z-0"></div>
-          <div className="container mx-auto px-4 mobile:px-4 relative z-10">
+          <div className="container mx-auto px-4 mobile:px-0 relative z-10">
             <div className="text-center mb-12 mobile:mb-10">
-              <h2 className="text-2xl mobile:text-3xl md:text-4xl font-extrabold mb-4 relative inline-block font-heading text-gold-400">
-                FEATURED WORK
-                <span className="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-gold-400 to-transparent"></span>
-              </h2>
+              <h2 className="mobile:page-title">FEATURED WORK</h2>
               <div className="flex justify-center my-3">
                 <div className="w-8 h-1 bg-gold-400 rounded-full"></div>
               </div>
@@ -355,15 +346,12 @@ const Home = () => {
           </div>
         </section>
 
-        {/* Testimonials Section */}
-        <section className="py-16 mobile:section-py relative">
+        {/* Testimonials Section - Mobile Page Separation */}
+        <section className="py-16 mobile:section-py relative mobile-page-section">
           <div className="absolute inset-0 bg-gradient-to-b from-royal-blue to-royal-dark z-0"></div>
-          <div className="container mx-auto px-4 mobile:px-4 relative z-10">
+          <div className="container mx-auto px-4 mobile:px-0 relative z-10">
             <div className="text-center mb-12 mobile:mb-10">
-              <h2 className="text-2xl mobile:text-3xl md:text-4xl font-extrabold mb-4 relative inline-block font-heading text-gold-400">
-                TESTIMONIALS
-                <span className="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-gold-400 to-transparent"></span>
-              </h2>
+              <h2 className="mobile:page-title">TESTIMONIALS</h2>
               <div className="flex justify-center my-3">
                 <div className="w-8 h-1 bg-gold-400 rounded-full"></div>
               </div>
@@ -395,14 +383,12 @@ const Home = () => {
           </div>
         </section>
 
-        {/* CTA Section */}
-        <section className="py-16 mobile:section-py relative">
+        {/* CTA Section - Mobile Page Separation */}
+        <section className="py-16 mobile:section-py relative mobile-page-section">
           <div className="absolute inset-0 bg-gradient-to-b from-royal-dark to-royal-blue z-0"></div>
-          <div className="container mx-auto px-4 mobile:px-4 relative z-10">
+          <div className="container mx-auto px-4 mobile:px-0 relative z-10">
             <div className="max-w-4xl mx-auto text-center">
-              <h2 className="text-2xl mobile:text-3xl md:text-4xl font-extrabold mb-5 font-heading text-gold-400" data-aos="fade-up">
-                READY TO START?
-              </h2>
+              <h2 className="mobile:page-title">READY TO START?</h2>
               <h3 className="text-xl mobile:text-2xl md:text-3xl font-bold mb-5 text-ivory" data-aos="fade-up" data-aos-delay="100">
                 Ready to Elevate Your Brand?
               </h3>
