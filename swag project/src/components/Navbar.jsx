@@ -45,12 +45,26 @@ const Navbar = () => {
     const handleResize = () => {
       if (window.innerWidth >= 768) {
         setIsOpen(false);
+        setServicesOpen(false);
       }
     };
 
     window.addEventListener('resize', handleResize);
     return () => window.removeEventListener('resize', handleResize);
   }, []);
+
+  // Close mobile menu when clicking outside
+  React.useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (isOpen && !event.target.closest('.mobile-menu') && !event.target.closest('.menu-button')) {
+        setIsOpen(false);
+        setServicesOpen(false);
+      }
+    };
+
+    document.addEventListener('click', handleClickOutside);
+    return () => document.removeEventListener('click', handleClickOutside);
+  }, [isOpen]);
 
   return (
     <nav 
@@ -74,7 +88,7 @@ const Navbar = () => {
                 onMouseLeave={() => setServicesOpen(false)}
               >
                 <button
-                  className="text-ivory hover:text-gold-400 px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300 flex items-center relative group hover:scale-105"
+                  className="text-ivory hover:text-gold-400 px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300 flex items-center relative group hover:scale-105 focus:outline-none focus:ring-2 focus:ring-gold-400"
                   data-aos="fade-down"
                   data-aos-delay={300 + index * 50}
                 >
@@ -94,8 +108,11 @@ const Navbar = () => {
                         <Link
                           key={idx}
                           to={service.href}
-                          className="block px-4 py-3 text-ivory hover:bg-royal-navy hover:text-gold-400 transition-all duration-300 text-sm hover:pl-6"
-                          onClick={() => setServicesOpen(false)}
+                          className="block px-4 py-3 text-ivory hover:bg-royal-navy hover:text-gold-400 transition-all duration-300 text-sm hover:pl-6 focus:bg-royal-navy focus:text-gold-400 focus:outline-none"
+                          onClick={() => {
+                            setServicesOpen(false);
+                            setIsOpen(false);
+                          }}
                         >
                           {service.name}
                         </Link>
@@ -108,7 +125,7 @@ const Navbar = () => {
               <Link
                 key={index}
                 to={link.href}
-                className="text-ivory hover:text-gold-400 px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300 relative group hover:scale-105"
+                className="text-ivory hover:text-gold-400 px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300 relative group hover:scale-105 focus:outline-none focus:ring-2 focus:ring-gold-400"
                 data-aos="fade-down"
                 data-aos-delay={300 + index * 50}
               >
@@ -121,7 +138,7 @@ const Navbar = () => {
 
         {/* Mobile Menu Button */}
         <button 
-          className="md:hidden text-ivory z-50 p-2 rounded-lg hover:bg-royal-navy transition-all duration-300 react-icon"
+          className="md:hidden text-ivory z-50 p-2 rounded-lg hover:bg-royal-navy transition-all duration-300 react-icon menu-button focus:outline-none focus:ring-2 focus:ring-gold-400"
           onClick={() => setIsOpen(!isOpen)}
           data-aos="fade-down"
           data-aos-delay="200"
@@ -134,7 +151,7 @@ const Navbar = () => {
         {/* Mobile Menu */}
         {isOpen && (
           <div 
-            className="fixed inset-0 bg-royal-dark z-40 flex flex-col items-center justify-center md:hidden animate-fade-in"
+            className="fixed inset-0 bg-royal-dark z-40 flex flex-col items-center justify-center md:hidden animate-fade-in mobile-menu"
             data-aos="fade-in"
           >
             <div className="flex flex-col items-center space-y-8 w-full px-4 max-h-[80vh] overflow-y-auto">
@@ -142,7 +159,7 @@ const Navbar = () => {
                 link.name === 'Services' ? (
                   <div key={index} className="w-full">
                     <button
-                      className="text-2xl text-ivory hover:text-gold-400 py-2 w-full text-center border-b border-royal-navy hover:border-gold-400 transition-all duration-300 flex items-center justify-center hover:scale-105"
+                      className="text-2xl text-ivory hover:text-gold-400 py-2 w-full text-center border-b border-royal-navy hover:border-gold-400 transition-all duration-300 flex items-center justify-center hover:scale-105 focus:outline-none focus:ring-2 focus:ring-gold-400 rounded-lg"
                       onClick={() => setServicesOpen(!servicesOpen)}
                       data-aos="fade-up"
                       data-aos-delay={200 + index * 100}
@@ -159,7 +176,7 @@ const Navbar = () => {
                           <Link
                             key={idx}
                             to={service.href}
-                            className="block py-3 text-ivory hover:text-gold-400 text-center border-b border-royal-navy hover:border-gold-400 transition-all duration-300 hover:scale-105"
+                            className="block py-3 text-ivory hover:text-gold-400 text-center border-b border-royal-navy hover:border-gold-400 transition-all duration-300 hover:scale-105 focus:outline-none focus:bg-royal-navy focus:text-gold-400 rounded-lg"
                             onClick={() => {
                               setServicesOpen(false);
                               setIsOpen(false);
@@ -175,7 +192,7 @@ const Navbar = () => {
                   <Link
                     key={index}
                     to={link.href}
-                    className="text-2xl text-ivory hover:text-gold-400 py-2 w-full text-center border-b border-royal-navy hover:border-gold-400 transition-all duration-300 hover:scale-105"
+                    className="text-2xl text-ivory hover:text-gold-400 py-2 w-full text-center border-b border-royal-navy hover:border-gold-400 transition-all duration-300 hover:scale-105 focus:outline-none focus:ring-2 focus:ring-gold-400 rounded-lg"
                     onClick={() => setIsOpen(false)}
                     data-aos="fade-up"
                     data-aos-delay={200 + index * 100}
