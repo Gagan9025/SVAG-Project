@@ -7,6 +7,7 @@ const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const [servicesOpen, setServicesOpen] = useState(false);
+  const [mobileServicesOpen, setMobileServicesOpen] = useState(false);
 
   const navLinks = [
     { name: 'Home', href: '/' },
@@ -46,6 +47,7 @@ const Navbar = () => {
       if (window.innerWidth >= 768) {
         setIsOpen(false);
         setServicesOpen(false);
+        setMobileServicesOpen(false);
       }
     };
 
@@ -59,6 +61,7 @@ const Navbar = () => {
       if (isOpen && !event.target.closest('.mobile-menu') && !event.target.closest('.menu-button')) {
         setIsOpen(false);
         setServicesOpen(false);
+        setMobileServicesOpen(false);
       }
     };
 
@@ -138,7 +141,7 @@ const Navbar = () => {
 
         {/* Mobile Menu Button */}
         <button 
-          className="md:hidden text-ivory z-50 p-2 rounded-lg hover:bg-royal-navy transition-all duration-300 react-icon menu-button focus:outline-none focus:ring-2 focus:ring-gold-400"
+          className="md:hidden text-ivory z-50 p-2 rounded-lg hover:bg-royal-navy transition-all duration-300 react-icon menu-button focus:outline-none focus:ring-2 focus:ring-gold-400 touch:min-h-12 touch:min-w-12 touch:p-3"
           onClick={() => setIsOpen(!isOpen)}
           data-aos="fade-down"
           data-aos-delay="200"
@@ -154,31 +157,31 @@ const Navbar = () => {
             className="fixed inset-0 bg-royal-dark z-40 flex flex-col items-center justify-center md:hidden animate-fade-in mobile-menu"
             data-aos="fade-in"
           >
-            <div className="flex flex-col items-center space-y-8 w-full px-4 max-h-[80vh] overflow-y-auto">
+            <div className="flex flex-col items-center space-y-6 w-full px-4 max-h-[80vh] overflow-y-auto py-8">
               {navLinks.map((link, index) => (
                 link.name === 'Services' ? (
                   <div key={index} className="w-full">
                     <button
-                      className="text-2xl text-ivory hover:text-gold-400 py-2 w-full text-center border-b border-royal-navy hover:border-gold-400 transition-all duration-300 flex items-center justify-center hover:scale-105 focus:outline-none focus:ring-2 focus:ring-gold-400 rounded-lg"
-                      onClick={() => setServicesOpen(!servicesOpen)}
+                      className="text-2xl text-ivory hover:text-gold-400 py-3 w-full text-center border-b border-royal-navy hover:border-gold-400 transition-all duration-300 flex items-center justify-center hover:scale-105 focus:outline-none focus:ring-2 focus:ring-gold-400 rounded-lg touch:min-h-12"
+                      onClick={() => setMobileServicesOpen(!mobileServicesOpen)}
                       data-aos="fade-up"
                       data-aos-delay={200 + index * 100}
-                      aria-expanded={servicesOpen}
+                      aria-expanded={mobileServicesOpen}
                     >
                       {link.name}
-                      <FiChevronDown className={`ml-2 transition-transform duration-300 ${servicesOpen ? 'rotate-180' : ''}`} />
+                      <FiChevronDown className={`ml-2 transition-transform duration-300 ${mobileServicesOpen ? 'rotate-180' : ''}`} />
                     </button>
                     
                     {/* Mobile Services Dropdown */}
-                    {servicesOpen && (
-                      <div className="mt-4 space-y-2 animate-fade-in-down">
+                    {mobileServicesOpen && (
+                      <div className="mt-4 space-y-3 animate-fade-in-down">
                         {serviceLinks.map((service, idx) => (
                           <Link
                             key={idx}
                             to={service.href}
-                            className="block py-3 text-ivory hover:text-gold-400 text-center border-b border-royal-navy hover:border-gold-400 transition-all duration-300 hover:scale-105 focus:outline-none focus:bg-royal-navy focus:text-gold-400 rounded-lg"
+                            className="block py-3 text-lg text-ivory hover:text-gold-400 text-center border-b border-royal-navy hover:border-gold-400 transition-all duration-300 hover:scale-105 focus:outline-none focus:bg-royal-navy focus:text-gold-400 rounded-lg touch:min-h-12"
                             onClick={() => {
-                              setServicesOpen(false);
+                              setMobileServicesOpen(false);
                               setIsOpen(false);
                             }}
                           >
@@ -192,7 +195,7 @@ const Navbar = () => {
                   <Link
                     key={index}
                     to={link.href}
-                    className="text-2xl text-ivory hover:text-gold-400 py-2 w-full text-center border-b border-royal-navy hover:border-gold-400 transition-all duration-300 hover:scale-105 focus:outline-none focus:ring-2 focus:ring-gold-400 rounded-lg"
+                    className="text-2xl text-ivory hover:text-gold-400 py-3 w-full text-center border-b border-royal-navy hover:border-gold-400 transition-all duration-300 hover:scale-105 focus:outline-none focus:ring-2 focus:ring-gold-400 rounded-lg touch:min-h-12"
                     onClick={() => setIsOpen(false)}
                     data-aos="fade-up"
                     data-aos-delay={200 + index * 100}
