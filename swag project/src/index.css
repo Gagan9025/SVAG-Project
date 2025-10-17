@@ -104,6 +104,147 @@
   }
 }
 
+/* Enhanced mobile typography and spacing */
+@media (max-width: 767px) {
+  /* Improved heading sizes for mobile */
+  .mobile\:text-4xl {
+    font-size: 2.25rem; /* 36px */
+    line-height: 1.2;
+  }
+  
+  .mobile\:text-3xl {
+    font-size: 1.875rem; /* 30px */
+    line-height: 1.25;
+  }
+  
+  .mobile\:text-2xl {
+    font-size: 1.5rem; /* 24px */
+    line-height: 1.3;
+  }
+  
+  .mobile\:text-xl {
+    font-size: 1.25rem; /* 20px */
+    line-height: 1.35;
+  }
+  
+  .mobile\:text-lg {
+    font-size: 1.125rem; /* 18px */
+    line-height: 1.4;
+  }
+  
+  .mobile\:text-base {
+    font-size: 1rem; /* 16px */
+    line-height: 1.45;
+  }
+  
+  .mobile\:text-sm {
+    font-size: 0.875rem; /* 14px */
+    line-height: 1.5;
+  }
+  
+  .mobile\:text-xs {
+    font-size: 0.75rem; /* 12px */
+    line-height: 1.55;
+  }
+  
+  /* Enhanced mobile spacing */
+  .mobile\:py-16 {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+  }
+  
+  .mobile\:px-4 {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  
+  .mobile\:gap-8 {
+    gap: 2rem;
+  }
+  
+  .mobile\:gap-6 {
+    gap: 1.5rem;
+  }
+  
+  .mobile\:gap-4 {
+    gap: 1rem;
+  }
+  
+  .mobile\:gap-3 {
+    gap: 0.75rem;
+  }
+  
+  .mobile\:gap-2 {
+    gap: 0.5rem;
+  }
+  
+  /* Mobile section padding adjustments */
+  .mobile\:section-py {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+  }
+  
+  /* Mobile card enhancements */
+  .mobile\:card-enhanced {
+    padding: 1.25rem;
+    border-radius: 0.75rem;
+  }
+  
+  /* Mobile button enhancements */
+  .mobile\:btn-enhanced {
+    padding: 0.875rem 1.25rem;
+    font-size: 1rem;
+    border-radius: 0.5rem;
+  }
+  
+  /* Mobile grid adjustments */
+  .mobile\:grid-cols-1 {
+    grid-template-columns: 1fr;
+  }
+  
+  .mobile\:grid-cols-2 {
+    grid-template-columns: 1fr 1fr;
+  }
+  
+  /* Mobile flex adjustments */
+  .mobile\:flex-col {
+    flex-direction: column;
+  }
+  
+  .mobile\:items-center {
+    align-items: center;
+  }
+  
+  .mobile\:text-center {
+    text-align: center;
+  }
+  
+  /* Mobile margin adjustments */
+  .mobile\:mb-16 {
+    margin-bottom: 4rem;
+  }
+  
+  .mobile\:mb-12 {
+    margin-bottom: 3rem;
+  }
+  
+  .mobile\:mb-10 {
+    margin-bottom: 2.5rem;
+  }
+  
+  .mobile\:mb-8 {
+    margin-bottom: 2rem;
+  }
+  
+  .mobile\:mb-6 {
+    margin-bottom: 1.5rem;
+  }
+  
+  .mobile\:mb-4 {
+    margin-bottom: 1rem;
+  }
+}
+
 /* Enhanced mobile-specific utility classes */
 @media (max-width: 767px) {
   .mobile\:text-center {
@@ -567,62 +708,64 @@
   
   .btn-gold, .btn-royal, .btn-royal-gold {
     width: 100%;
-    margin-bottom: 0.5rem;
-    padding: 0.75rem 1rem;
-    font-size: 0.875rem;
+    margin-bottom: 0.75rem;
+    padding: 0.875rem 1.25rem;
+    font-size: 1rem;
+    border-radius: 0.5rem;
   }
   
   .card-glass, .card-royal, .card-royal-gold {
-    padding: 1rem;
-    margin-bottom: 1rem;
+    padding: 1.25rem;
+    margin-bottom: 1.25rem;
+    border-radius: 0.75rem;
   }
   
   .text-4xl {
-    font-size: 2rem;
+    font-size: 2.25rem; /* 36px */
   }
   
   .text-3xl {
-    font-size: 1.75rem;
+    font-size: 1.875rem; /* 30px */
   }
   
   .text-2xl {
-    font-size: 1.5rem;
+    font-size: 1.5rem; /* 24px */
   }
   
   .p-8 {
-    padding: 1rem;
+    padding: 1.5rem;
   }
   
   .p-6 {
-    padding: 0.75rem;
+    padding: 1.25rem;
   }
   
   .p-4 {
-    padding: 0.5rem;
+    padding: 1rem;
   }
   
   .m-8 {
-    margin: 1rem;
+    margin: 1.5rem;
   }
   
   .m-6 {
-    margin: 0.75rem;
+    margin: 1.25rem;
   }
   
   .m-4 {
-    margin: 0.5rem;
+    margin: 1rem;
   }
   
   .gap-8 {
-    gap: 1rem;
+    gap: 1.5rem;
   }
   
   .gap-6 {
-    gap: 0.75rem;
+    gap: 1.25rem;
   }
   
   .gap-4 {
-    gap: 0.5rem;
+    gap: 1rem;
   }
   
   .h-screen {
@@ -641,6 +784,26 @@
   
   .grid-cols-2 {
     grid-template-columns: 1fr 1fr;
+  }
+  
+  /* Mobile-specific enhancements */
+  .mobile\:xs\:btn-full {
+    width: 100%;
+    padding: 1rem;
+    font-size: 1.125rem;
+  }
+  
+  .mobile\:xs\:card-enhanced {
+    padding: 1.5rem;
+    border-radius: 1rem;
+  }
+  
+  .mobile\:xs\:text-center {
+    text-align: center;
+  }
+  
+  .mobile\:xs\:flex-col {
+    flex-direction: column;
   }
 }
 
@@ -671,6 +834,56 @@
   
   .sm\:grid-cols-2 {
     grid-template-columns: repeat(2, 1fr);
+  }
+  
+  /* Enhanced mobile spacing for small devices */
+  .mobile\:sm\:gap-8 {
+    gap: 2rem;
+  }
+  
+  .mobile\:sm\:gap-6 {
+    gap: 1.5rem;
+  }
+  
+  .mobile\:sm\:gap-4 {
+    gap: 1rem;
+  }
+  
+  .mobile\:sm\:p-8 {
+    padding: 2rem;
+  }
+  
+  .mobile\:sm\:p-6 {
+    padding: 1.5rem;
+  }
+  
+  .mobile\:sm\:p-4 {
+    padding: 1rem;
+  }
+  
+  .mobile\:sm\:text-4xl {
+    font-size: 2.5rem;
+  }
+  
+  .mobile\:sm\:text-3xl {
+    font-size: 2rem;
+  }
+  
+  .mobile\:sm\:text-2xl {
+    font-size: 1.75rem;
+  }
+  
+  /* Mobile card enhancements for small devices */
+  .mobile\:sm\:card-enhanced {
+    padding: 1.75rem;
+    border-radius: 1rem;
+  }
+  
+  /* Mobile button enhancements for small devices */
+  .mobile\:sm\:btn-enhanced {
+    padding: 1rem 1.5rem;
+    font-size: 1.125rem;
+    border-radius: 0.625rem;
   }
 }
 
@@ -713,6 +926,23 @@
   
   .tablet\:hidden {
     display: none;
+  }
+  
+  /* Tablet-specific enhancements */
+  .tablet\:gap-8 {
+    gap: 2rem;
+  }
+  
+  .tablet\:gap-6 {
+    gap: 1.5rem;
+  }
+  
+  .tablet\:p-8 {
+    padding: 2rem;
+  }
+  
+  .tablet\:p-6 {
+    padding: 1.5rem;
   }
 }
 
@@ -769,20 +999,54 @@
 /* Very small screens */
 @media (max-width: 360px) {
   .text-4xl {
-    font-size: 2rem;
+    font-size: 2.25rem; /* 36px */
   }
   
   .text-3xl {
-    font-size: 1.75rem;
+    font-size: 1.875rem; /* 30px */
+  }
+  
+  .text-2xl {
+    font-size: 1.5rem; /* 24px */
   }
   
   .p-8 {
+    padding: 1.25rem;
+  }
+  
+  .p-6 {
     padding: 1rem;
   }
   
   .btn-gold, .btn-royal, .btn-royal-gold {
-    padding: 0.5rem 0.75rem;
-    font-size: 0.8125rem;
+    padding: 0.75rem 1rem;
+    font-size: 0.875rem;
+    border-radius: 0.5rem;
+  }
+  
+  /* Enhanced mobile elements for very small screens */
+  .mobile\:xs\:text-4xl {
+    font-size: 2rem;
+  }
+  
+  .mobile\:xs\:text-3xl {
+    font-size: 1.75rem;
+  }
+  
+  .mobile\:xs\:p-6 {
+    padding: 1rem;
+  }
+  
+  .mobile\:xs\:p-4 {
+    padding: 0.75rem;
+  }
+  
+  .mobile\:xs\:gap-4 {
+    gap: 1rem;
+  }
+  
+  .mobile\:xs\:gap-3 {
+    gap: 0.75rem;
   }
 }
 
