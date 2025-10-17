@@ -929,6 +929,10 @@
   }
   
   /* Tablet-specific enhancements */
+  .tablet\:gap-10 {
+    gap: 2.5rem;
+  }
+  
   .tablet\:gap-8 {
     gap: 2rem;
   }
@@ -937,12 +941,41 @@
     gap: 1.5rem;
   }
   
+  .tablet\:p-10 {
+    padding: 2.5rem;
+  }
+  
   .tablet\:p-8 {
     padding: 2rem;
   }
   
   .tablet\:p-6 {
     padding: 1.5rem;
+  }
+  
+  .tablet\:text-5xl {
+    font-size: 3rem;
+  }
+  
+  .tablet\:text-4xl {
+    font-size: 2.5rem;
+  }
+  
+  .tablet\:text-3xl {
+    font-size: 2rem;
+  }
+  
+  /* Tablet card enhancements */
+  .tablet\:card-enhanced {
+    padding: 2rem;
+    border-radius: 1.25rem;
+  }
+  
+  /* Tablet button enhancements */
+  .tablet\:btn-enhanced {
+    padding: 1.125rem 1.75rem;
+    font-size: 1.125rem;
+    border-radius: 0.625rem;
   }
 }
 
