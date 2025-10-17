@@ -12,14 +12,14 @@ const Hero = () => {
       <BackgroundBeams className="absolute inset-0 z-0" />
       
       <div className="container mx-auto px-4 relative z-10">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 md:gap-16 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 items-center">
           <div 
             className="animate-fade-in-left"
             data-aos="fade-right"
             data-aos-delay="200"
           >
             <h1 
-              className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 md:mb-6 leading-tight animate-fade-in-down"
+              className="text-3xl xs:text-4xl sm:text-5xl md:text-6xl font-bold mb-4 md:mb-6 leading-tight animate-fade-in-down"
               data-aos="fade-up"
               data-aos-delay="300"
             >
@@ -28,7 +28,7 @@ const Hero = () => {
             </h1>
             
             <p 
-              className="text-lg sm:text-xl text-ivory-light mb-6 md:mb-8 max-w-2xl animate-fade-in"
+              className="text-base xs:text-lg sm:text-xl text-ivory-light mb-6 md:mb-8 max-w-2xl animate-fade-in"
               data-aos="fade-up"
               data-aos-delay="400"
             >
@@ -36,7 +36,7 @@ const Hero = () => {
             </p>
             
             <p 
-              className="text-base sm:text-lg text-silver-400 mb-8 md:mb-10 max-w-2xl animate-fade-in"
+              className="text-sm xs:text-base sm:text-lg text-silver-400 mb-8 md:mb-10 max-w-2xl animate-fade-in"
               data-aos="fade-up"
               data-aos-delay="500"
             >
@@ -51,7 +51,7 @@ const Hero = () => {
               <AnimatedButton 
                 variant="gold" 
                 icon={<FiArrowRight />}
-                className="group glow-pulse w-full sm:w-auto"
+                className="group glow-pulse w-full xs:w-auto touch:min-h-12 touch:min-w-12 touch:p-4 touch:text-lg"
               >
                 Get Started
               </AnimatedButton>
@@ -59,7 +59,7 @@ const Hero = () => {
               <AnimatedButton 
                 variant="royal" 
                 icon={<FiArrowRight />}
-                className="group w-full sm:w-auto"
+                className="group w-full xs:w-auto touch:min-h-12 touch:min-w-12 touch:p-4 touch:text-lg"
               >
                 View Our Work
               </AnimatedButton>
@@ -71,23 +71,23 @@ const Hero = () => {
             data-aos="fade-left"
             data-aos-delay="300"
           >
-            <div className="glass-effect rounded-2xl p-6 md:p-8 border border-gold-400/20 animate-fade-in">
-              <div className="grid grid-cols-2 gap-4 md:gap-6">
+            <div className="glass-effect rounded-2xl p-4 xs:p-6 md:p-8 border border-gold-400/20 animate-fade-in">
+              <div className="grid grid-cols-2 gap-3 xs:gap-4 md:gap-6">
                 {[...Array(4)].map((_, i) => (
                   <AnimatedCard
                     key={i}
                     variant="royal"
-                    className="bg-royal-navy rounded-xl p-4 md:p-6 border border-gold-400/10 hover:scale-105 transition-all duration-300 animate-fade-in-up"
+                    className="bg-royal-navy rounded-xl p-3 xs:p-4 md:p-6 border border-gold-400/10 hover:scale-105 transition-all duration-300 animate-fade-in-up touch:min-h-24 touch:min-w-24 touch:p-4"
                     data-aos="zoom-in"
                     data-aos-delay={700 + i * 100}
                   >
-                    <div className="text-2xl md:text-3xl text-gold-400 mb-3 md:mb-4 animate-bounce-slow">
+                    <div className="text-xl xs:text-2xl md:text-3xl text-gold-400 mb-2 xs:mb-3 md:mb-4 animate-bounce-slow">
                       {i === 0 && <FiBox />}
                       {i === 1 && <FiGlobe />}
                       {i === 2 && <FiSmartphone />}
                       {i === 3 && <FiFilm />}
                     </div>
-                    <h3 className="text-lg md:text-xl font-semibold mb-2 text-gold-300">
+                    <h3 className="text-base xs:text-lg md:text-xl font-semibold mb-1 xs:mb-2 text-gold-300">
                       {i === 0 && 'Brand Identity'}
                       {i === 1 && 'Digital Strategy'}
                       {i === 2 && 'Web Development'}

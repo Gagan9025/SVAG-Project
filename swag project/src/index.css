@@ -895,8 +895,101 @@
     padding: 0 10px;
   }
   
-  /* Additional responsive utility classes */
-  @media (max-width: 640px) {
+  /* Enhanced responsive utility classes for all device sizes */
+  
+  /* Extra small devices (phones, less than 576px) */
+  @media (max-width: 575.98px) {
+    .container {
+      padding-left: 1rem;
+      padding-right: 1rem;
+    }
+    
+    .btn-gold, .btn-royal, .btn-royal-gold {
+      width: 100%;
+      margin-bottom: 0.5rem;
+      padding: 0.75rem 1rem;
+      font-size: 0.875rem;
+    }
+    
+    .card-glass, .card-royal, .card-royal-gold {
+      padding: 1rem;
+      margin-bottom: 1rem;
+    }
+    
+    .text-4xl {
+      font-size: 2rem;
+    }
+    
+    .text-3xl {
+      font-size: 1.75rem;
+    }
+    
+    .text-2xl {
+      font-size: 1.5rem;
+    }
+    
+    .p-8 {
+      padding: 1rem;
+    }
+    
+    .p-6 {
+      padding: 0.75rem;
+    }
+    
+    .p-4 {
+      padding: 0.5rem;
+    }
+    
+    .m-8 {
+      margin: 1rem;
+    }
+    
+    .m-6 {
+      margin: 0.75rem;
+    }
+    
+    .m-4 {
+      margin: 0.5rem;
+    }
+    
+    .gap-8 {
+      gap: 1rem;
+    }
+    
+    .gap-6 {
+      gap: 0.75rem;
+    }
+    
+    .gap-4 {
+      gap: 0.5rem;
+    }
+    
+    .h-screen {
+      min-height: 100vh;
+    }
+    
+    /* Adjust hero section for small screens */
+    .hero-content {
+      padding-top: 6rem;
+    }
+    
+    /* Adjust grid layouts for small screens */
+    .grid-cols-1 {
+      grid-template-columns: 1fr;
+    }
+    
+    .grid-cols-2 {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+  
+  /* Small devices (landscape phones, 576px and up) */
+  @media (min-width: 576px) and (max-width: 767.98px) {
+    .container {
+      padding-left: 1.5rem;
+      padding-right: 1.5rem;
+    }
+    
     .sm\:text-3xl {
       font-size: 1.875rem;
     }
@@ -916,7 +1009,13 @@
     }
   }
   
-  @media (max-width: 768px) {
+  /* Medium devices (tablets, 768px and up) */
+  @media (min-width: 768px) and (max-width: 991.98px) {
+    .container {
+      padding-left: 2rem;
+      padding-right: 2rem;
+    }
+    
     .md\:px-0 {
       padding-left: 0;
       padding-right: 0;
@@ -933,26 +1032,34 @@
     .md\:items-start {
       align-items: flex-start;
     }
+    
+    /* Adjust navigation for tablets */
+    .tablet\:flex {
+      display: flex;
+    }
+    
+    .tablet\:hidden {
+      display: none;
+    }
   }
   
-  /* Improved mobile responsiveness */
-  @media (max-width: 480px) {
+  /* Large devices (desktops, 992px and up) */
+  @media (min-width: 992px) and (max-width: 1199.98px) {
     .container {
-      padding-left: 1rem;
-      padding-right: 1rem;
+      padding-left: 2.5rem;
+      padding-right: 2.5rem;
     }
     
-    .btn-gold, .btn-royal, .btn-royal-gold {
-      width: 100%;
-      margin-bottom: 0.5rem;
+    .lg\:grid-cols-2 {
+      grid-template-columns: repeat(2, 1fr);
     }
     
-    .card-glass {
-      margin-bottom: 1rem;
+    .lg\:grid-cols-3 {
+      grid-template-columns: repeat(3, 1fr);
     }
   }
   
-  /* Large screen optimizations */
+  /* Extra large devices (large desktops, 1200px and up) */
   @media (min-width: 1200px) {
     .container {
       max-width: 1200px;
@@ -990,6 +1097,85 @@
     
     .p-8 {
       padding: 1rem;
+    }
+    
+    .btn-gold, .btn-royal, .btn-royal-gold {
+      padding: 0.5rem 0.75rem;
+      font-size: 0.8125rem;
+    }
+  }
+  
+  /* Large phones and small tablets in landscape mode */
+  @media (max-width: 812px) and (orientation: landscape) {
+    .landscape\:h-auto {
+      height: auto;
+    }
+    
+    .landscape\:min-h-screen {
+      min-height: 100vh;
+    }
+    
+    .landscape\:py-4 {
+      padding-top: 1rem;
+      padding-bottom: 1rem;
+    }
+    
+    .landscape\:text-lg {
+      font-size: 1.125rem;
+    }
+    
+    .landscape\:text-base {
+      font-size: 1rem;
+    }
+  }
+  
+  /* High resolution screens */
+  @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    .high-dpi\:text-shadow {
+      text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+    }
+    
+    .high-dpi\:border {
+      border-width: 0.5px;
+    }
+  }
+  
+  /* Touch devices optimization */
+  @media (hover: none) and (pointer: coarse) {
+    .touch\:hover-none:hover {
+      transform: none;
+    }
+    
+    .touch\:scale-active:active {
+      transform: scale(0.95);
+    }
+    
+    /* Larger touch targets for mobile */
+    .touch\:min-h-12 {
+      min-height: 3rem;
+    }
+    
+    .touch\:min-w-12 {
+      min-width: 3rem;
+    }
+    
+    .touch\:p-4 {
+      padding: 1rem;
+    }
+    
+    .touch\:text-lg {
+      font-size: 1.125rem;
+    }
+  }
+  
+  /* Reduce motion for accessibility */
+  @media (prefers-reduced-motion: reduce) {
+    .motion-safe\:animate-none {
+      animation: none;
+    }
+    
+    .motion-safe\:transition-none {
+      transition: none;
     }
   }
 }
