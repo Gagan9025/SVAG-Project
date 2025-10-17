@@ -44,33 +44,33 @@ const Portfolio = () => {
     : projects.filter(project => project.category === activeFilter);
 
   return (
-    <section id="portfolio" className="py-20 relative">
+    <section id="portfolio" className="py-16 md:py-20 relative">
       <div className="absolute inset-0 bg-gradient-to-b from-royal-dark to-royal-blue z-0"></div>
       <div className="container mx-auto px-4 relative z-10">
         {/* Custom bold heading for "Our Work" */}
-        <div className="mb-16 text-center">
-          <h2 className="text-4xl md:text-5xl font-extrabold mb-4 relative inline-block font-heading text-gold-400">
+        <div className="mb-12 md:mb-16 text-center">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold mb-4 relative inline-block font-heading text-gold-400">
             OUR WORK
             <span className="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-gold-400 to-transparent"></span>
           </h2>
           <div className="flex justify-center my-4">
             <div className="w-8 h-1 bg-gold-400 rounded-full"></div>
           </div>
-          <p className="text-xl text-gold-300 mt-4 max-w-3xl mx-auto font-sans">
+          <p className="text-base sm:text-lg md:text-xl text-gold-300 mt-4 max-w-3xl mx-auto font-sans">
             Showcasing our latest projects and creative solutions that drive real business results
           </p>
         </div>
         
         {/* Filter Buttons */}
         <div 
-          className="flex flex-wrap justify-center gap-4 mb-16"
+          className="flex flex-wrap justify-center gap-2 md:gap-4 mb-12 md:mb-16"
           data-aos="fade-up"
           data-aos-delay="200"
         >
           {filters.map((filter) => (
             <button
               key={filter.id}
-              className={`px-6 py-3 rounded-full font-medium relative overflow-hidden ${
+              className={`px-4 py-2 md:px-6 md:py-3 rounded-full font-medium text-sm md:text-base relative overflow-hidden ${
                 activeFilter === filter.id
                   ? 'bg-gold-400 text-royal-dark'
                   : 'text-ivory border border-gold-400/30 hover:bg-gold-400/10'
@@ -91,7 +91,7 @@ const Portfolio = () => {
         
         {/* Projects Grid */}
         <div 
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8"
         >
           {filteredProjects.map((project, index) => (
             <div
@@ -101,24 +101,24 @@ const Portfolio = () => {
               data-aos="fade-up"
               data-aos-delay={400 + index * 100}
             >
-              <div className="overflow-hidden rounded-lg mb-6 relative">
+              <div className="overflow-hidden rounded-lg mb-4 md:mb-6 relative">
                 <img
                   src={project.image}
                   alt={project.title}
-                  className="w-full h-60 object-cover react-icon"
+                  className="w-full h-48 md:h-60 object-cover react-icon"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-royal-dark to-transparent opacity-80"></div>
-                <div className="absolute bottom-4 left-4">
-                  <span className="px-3 py-1 bg-gold-400/20 text-gold-300 rounded-full text-sm">
+                <div className="absolute bottom-3 left-3 md:bottom-4 md:left-4">
+                  <span className="px-2 py-1 md:px-3 md:py-1 bg-gold-400/20 text-gold-300 rounded-full text-xs md:text-sm">
                     {project.category.charAt(0).toUpperCase() + project.category.slice(1)}
                   </span>
                 </div>
               </div>
-              <h3 className="text-2xl font-bold mb-2 text-ivory">{project.title}</h3>
-              <p className="text-silver-400 mb-4">{project.description}</p>
+              <h3 className="text-xl md:text-2xl font-bold mb-2 text-ivory">{project.title}</h3>
+              <p className="text-silver-400 mb-4 text-sm md:text-base">{project.description}</p>
               <div className="flex flex-wrap gap-2">
                 {project.results.map((result, idx) => (
-                  <span key={idx} className="px-3 py-1 bg-gold-400/10 text-gold-300 rounded-full text-sm">
+                  <span key={idx} className="px-2 py-1 md:px-3 md:py-1 bg-gold-400/10 text-gold-300 rounded-full text-xs md:text-sm">
                     {result}
                   </span>
                 ))}
@@ -139,23 +139,23 @@ const Portfolio = () => {
             data-aos="zoom-in"
             data-aos-delay="100"
           >
-            <div className="p-8">
-              <div className="flex justify-between items-start mb-6">
+            <div className="p-4 md:p-8">
+              <div className="flex justify-between items-start mb-4 md:mb-6">
                 <div>
-                  <span className="px-3 py-1 bg-gold-400/20 text-gold-300 rounded-full text-sm">
+                  <span className="px-2 py-1 md:px-3 md:py-1 bg-gold-400/20 text-gold-300 rounded-full text-xs md:text-sm">
                     {selectedProject.category.charAt(0).toUpperCase() + selectedProject.category.slice(1)}
                   </span>
-                  <h3 className="text-3xl font-bold text-ivory mt-2">{selectedProject.title}</h3>
+                  <h3 className="text-2xl md:text-3xl font-bold text-ivory mt-2">{selectedProject.title}</h3>
                 </div>
                 <button 
-                  className="text-ivory hover:text-gold-400 text-2xl react-icon"
+                  className="text-ivory hover:text-gold-400 text-xl md:text-2xl react-icon"
                   onClick={() => setSelectedProject(null)}
                 >
                   <FiX className="react-icon" />
                 </button>
               </div>
               
-              <div className="rounded-xl overflow-hidden mb-6 relative">
+              <div className="rounded-xl overflow-hidden mb-4 md:mb-6 relative">
                 <img 
                   src={selectedProject.image} 
                   alt={selectedProject.title} 
@@ -164,13 +164,13 @@ const Portfolio = () => {
                 <div className="absolute inset-0 bg-gradient-to-t from-royal-dark to-transparent opacity-50"></div>
               </div>
               
-              <p className="text-silver-400 text-lg mb-6">
+              <p className="text-silver-400 text-base md:text-lg mb-4 md:mb-6">
                 {selectedProject.description}
               </p>
               
-              <div className="flex flex-wrap gap-4 mb-8">
+              <div className="flex flex-wrap gap-2 md:gap-4 mb-6 md:mb-8">
                 {selectedProject.results.map((result, idx) => (
-                  <div key={idx} className="px-4 py-2 bg-gold-400/10 text-gold-300 rounded-full">
+                  <div key={idx} className="px-3 py-1 md:px-4 md:py-2 bg-gold-400/10 text-gold-300 rounded-full text-sm md:text-base">
                     {result}
                   </div>
                 ))}
@@ -178,12 +178,12 @@ const Portfolio = () => {
               
               <div className="flex flex-wrap gap-4">
                 <button 
-                  className="btn-gold"
+                  className="btn-gold w-full sm:w-auto"
                 >
                   View Case Study
                 </button>
                 <button 
-                  className="btn-royal"
+                  className="btn-royal w-full sm:w-auto"
                   onClick={() => setSelectedProject(null)}
                 >
                   Close
