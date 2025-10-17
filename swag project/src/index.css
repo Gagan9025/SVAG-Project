@@ -640,7 +640,7 @@
 
 @layer components {
   .btn-gold {
-    @apply px-6 py-3 rounded-lg font-semibold relative overflow-hidden;
+    @apply px-4 py-2 md:px-6 md:py-3 rounded-lg font-semibold relative overflow-hidden text-sm md:text-base;
     background: linear-gradient(135deg, #0f0f1a 0%, #1a1a2e 100%);
     border: 1px solid #ffd724;
     color: #fdfdfd;
@@ -669,7 +669,7 @@
   }
   
   .btn-royal {
-    @apply px-6 py-3 rounded-lg font-semibold relative overflow-hidden;
+    @apply px-4 py-2 md:px-6 md:py-3 rounded-lg font-semibold relative overflow-hidden text-sm md:text-base;
     background: linear-gradient(135deg, #251b5a 0%, #1a1a2e 100%);
     border: 1px solid #ffd724;
     color: #fdfdfd;
@@ -683,7 +683,7 @@
   }
   
   .btn-royal-gold {
-    @apply px-6 py-3 rounded-lg font-semibold relative overflow-hidden;
+    @apply px-4 py-2 md:px-6 md:py-3 rounded-lg font-semibold relative overflow-hidden text-sm md:text-base;
     background: linear-gradient(135deg, #ffd724 0%, #e6c200 100%);
     border: 1px solid #251b5a;
     color: #0f0f1a;
@@ -699,7 +699,7 @@
   }
   
   .card-glass {
-    @apply glass-effect rounded-xl p-6;
+    @apply glass-effect rounded-xl p-4 md:p-6;
     border: 1px solid rgba(255, 215, 0, 0.1);
     transition: all 0.3s ease;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -711,7 +711,7 @@
   }
   
   .card-royal {
-    @apply glass-effect-dark rounded-xl p-6;
+    @apply glass-effect-dark rounded-xl p-4 md:p-6;
     border: 1px solid rgba(37, 27, 90, 0.3);
     transition: all 0.3s ease;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -723,7 +723,7 @@
   }
   
   .card-royal-gold {
-    @apply rounded-xl p-6 relative overflow-hidden;
+    @apply rounded-xl p-4 md:p-6 relative overflow-hidden;
     background: linear-gradient(135deg, rgba(37, 27, 90, 0.9) 0%, rgba(26, 26, 46, 0.95) 100%);
     border: 1px solid rgba(255, 215, 0, 0.2);
     transition: all 0.3s ease;
@@ -746,7 +746,7 @@
   }
   
   .input-gold {
-    @apply w-full px-4 py-3 bg-royal-navy border border-silver-700 rounded-lg text-ivory focus:outline-none;
+    @apply w-full px-3 py-2 md:px-4 md:py-3 bg-royal-navy border border-silver-700 rounded-lg text-ivory focus:outline-none;
     transition: all 0.3s ease;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   }
@@ -757,7 +757,7 @@
   }
   
   .floating-label {
-    @apply absolute left-4 top-3 text-gold-500 pointer-events-none;
+    @apply absolute left-3 md:left-4 top-2 md:top-3 text-gold-500 pointer-events-none text-xs md:text-sm;
     transition: all 0.2s ease;
   }
   
@@ -800,7 +800,7 @@
   }
   
   .luxury-badge {
-    @apply inline-block px-3 py-1 text-xs font-semibold rounded-full;
+    @apply inline-block px-2 py-1 md:px-3 md:py-1 text-xs font-semibold rounded-full;
     background: linear-gradient(135deg, #ffd724 0%, #e6c200 100%);
     color: #0f0f1a;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -808,7 +808,7 @@
   
   /* Process step card enhancements */
   .process-step-card {
-    @apply glass-effect rounded-xl p-6 border;
+    @apply glass-effect rounded-xl p-4 md:p-6 border;
     border: 1px solid rgba(255, 215, 0, 0.2);
     transition: all 0.3s ease;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -833,7 +833,7 @@
   
   /* Step number enhancements */
   .step-number {
-    @apply w-10 h-10 rounded-full flex items-center justify-center font-bold text-lg;
+    @apply w-8 h-8 md:w-10 md:h-10 rounded-full flex items-center justify-center font-bold text-base md:text-lg;
     background: linear-gradient(135deg, #ffd724 0%, #e6c200 100%);
     color: #0f0f1a;
     box-shadow: 0 4px 6px rgba(255, 215, 0, 0.3);
@@ -893,5 +893,103 @@
     font-size: 1.2rem;
     background: #0f0f1a;
     padding: 0 10px;
+  }
+  
+  /* Additional responsive utility classes */
+  @media (max-width: 640px) {
+    .sm\:text-3xl {
+      font-size: 1.875rem;
+    }
+    
+    .sm\:text-2xl {
+      font-size: 1.5rem;
+    }
+    
+    .sm\:px-2 {
+      padding-left: 0.5rem;
+      padding-right: 0.5rem;
+    }
+    
+    .sm\:py-2 {
+      padding-top: 0.5rem;
+      padding-bottom: 0.5rem;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .md\:px-0 {
+      padding-left: 0;
+      padding-right: 0;
+    }
+    
+    .md\:text-center {
+      text-align: center;
+    }
+    
+    .md\:flex-col {
+      flex-direction: column;
+    }
+    
+    .md\:items-start {
+      align-items: flex-start;
+    }
+  }
+  
+  /* Improved mobile responsiveness */
+  @media (max-width: 480px) {
+    .container {
+      padding-left: 1rem;
+      padding-right: 1rem;
+    }
+    
+    .btn-gold, .btn-royal, .btn-royal-gold {
+      width: 100%;
+      margin-bottom: 0.5rem;
+    }
+    
+    .card-glass {
+      margin-bottom: 1rem;
+    }
+  }
+  
+  /* Large screen optimizations */
+  @media (min-width: 1200px) {
+    .container {
+      max-width: 1200px;
+    }
+  }
+  
+  /* Ultra-wide screen optimizations */
+  @media (min-width: 1400px) {
+    .container {
+      max-width: 1300px;
+    }
+    
+    .hero-content {
+      max-width: 60%;
+    }
+  }
+  
+  /* Small height devices (landscape mobile) */
+  @media (max-height: 500px) {
+    .h-screen {
+      height: auto;
+      min-height: 600px;
+    }
+  }
+  
+  /* Very small screens */
+  @media (max-width: 360px) {
+    .text-4xl {
+      font-size: 2rem;
+    }
+    
+    .text-3xl {
+      font-size: 1.75rem;
+    }
+    
+    .p-8 {
+      padding: 1rem;
+    }
   }
 }
