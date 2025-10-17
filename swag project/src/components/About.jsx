@@ -14,7 +14,7 @@ const About = () => {
           <div className="flex justify-center my-4">
             <div className="w-8 h-1 bg-gold-400 rounded-full"></div>
           </div>
-          <h3 className="text-3xl font-bold mt-8 mb-4 text-ivory-light">About Swag</h3>
+          <h3 className="text-3xl font-bold mt-8 mb-4 text-ivory-light">About SVAG</h3>
           <p className="text-xl text-gold-300 mt-4 max-w-3xl mx-auto font-sans">
             Crafting Digital Excellence Since 2016
           </p>
@@ -84,10 +84,10 @@ const About = () => {
           </div>
         </div>
 
-        {/* Why SVAG Section */}
+        {/* Why SVAG Design Hub Section */}
         <div className="mb-16 text-center">
           <h2 className="text-4xl md:text-5xl font-extrabold mb-4 relative inline-block font-heading text-gold-400 mt-16">
-            WHY SWAG?
+            WHY NEXT GEN DESIGN HUB?
             <span className="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-gold-400 to-transparent"></span>
           </h2>
           <div className="flex justify-center my-4">

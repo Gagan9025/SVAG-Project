@@ -26,7 +26,7 @@ const BackToTop = () => {
 
   return (
     <div
-      className="fixed bottom-8 right-8 z-50 transition-opacity duration-300"
+      className="fixed bottom-8 right-8 z-50 transition-all duration-300"
       style={{ 
         opacity: isVisible ? 1 : 0,
         transform: isVisible ? 'translateY(0)' : 'translateY(20px)'
@@ -36,9 +36,9 @@ const BackToTop = () => {
     >
       <button
         onClick={scrollToTop}
-        className="w-14 h-14 rounded-full bg-gradient-to-br from-gold-400 to-gold-600 text-royal-dark flex items-center justify-center shadow-lg border-2 border-gold-300 hover:from-gold-300 hover:to-gold-500 transition-all duration-300 hover:scale-110"
+        className="w-14 h-14 rounded-full bg-gradient-to-br from-gold-400 to-gold-600 text-royal-dark flex items-center justify-center shadow-lg border-2 border-gold-300 hover:from-gold-300 hover:to-gold-500 transition-all duration-300 hover:scale-110 animate-fade-in-up"
       >
-        <FiArrowUp size={24} className="font-bold animate-bounce" />
+        <FiArrowUp size={24} className="font-bold react-icon" />
       </button>
     </div>
   );

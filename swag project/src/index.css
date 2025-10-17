@@ -4,6 +4,45 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Performance optimization: Reduce motion for users who prefer it */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* Icon stability fixes - prevent jumping icons */
+.icon-stable {
+  transition: none !important;
+  transform: none !important;
+  will-change: auto !important;
+}
+
+.icon-stable:hover {
+  transform: none !important;
+}
+
+/* Prevent icon jumping in all components */
+[class*='icon'] {
+  transition: color 0.2s ease, background-color 0.2s ease;
+  /* Remove transform transitions that cause jumping */
+  transition-property: color, background-color;
+  will-change: auto;
+}
+
+/* Specific fix for react-icons */
+.react-icon {
+  transition: color 0.2s ease;
+  transform: none !important;
+  will-change: auto;
+}
+
+.react-icon:hover {
+  transform: none !important;
+}
+
 @layer base {
   body {
     @apply bg-royal-dark text-silver-800 font-sans;
@@ -93,19 +132,19 @@
     background: radial-gradient(circle at top right, #ffd724 0%, #251b5a 30%, #1a1a2e 70%, #0f0f1a 100%);
   }
   
-  /* Glowing pulse animation */
+  /* Enhanced glowing pulse animation with royal colors */
   @keyframes glow-pulse {
     0% {
       box-shadow: 0 0 5px rgba(255, 215, 0, 0.3),
-                  0 0 10px rgba(255, 215, 0, 0.2);
+                  0 0 10px rgba(37, 27, 90, 0.2);
     }
     50% {
       box-shadow: 0 0 15px rgba(255, 215, 0, 0.5),
-                  0 0 25px rgba(255, 215, 0, 0.3);
+                  0 0 25px rgba(37, 27, 90, 0.3);
     }
     100% {
       box-shadow: 0 0 5px rgba(255, 215, 0, 0.3),
-                  0 0 10px rgba(255, 215, 0, 0.2);
+                  0 0 10px rgba(37, 27, 90, 0.2);
     }
   }
   
@@ -113,7 +152,7 @@
     animation: glow-pulse 2.5s ease-in-out infinite;
   }
   
-  /* Fade in animation */
+  /* Smooth fade in animation */
   @keyframes fadeIn {
     from {
       opacity: 0;
@@ -177,93 +216,180 @@
     animation: scaleIn 0.6s ease-out forwards;
   }
   
-  /* Moving background animation with particles */
-  @keyframes moveParticle {
-    0% {
-      transform: translate(0, 0);
-    }
-    100% {
-      transform: translate(100px, 100px);
-    }
-  }
-  
-  @keyframes moveParticleReverse {
-    0% {
-      transform: translate(100px, 100px);
-    }
-    100% {
-      transform: translate(0, 0);
-    }
-  }
-  
-  /* Simplified float animation for better performance */
-  @keyframes float {
+  /* Royal float animation with enhanced elegance */
+  @keyframes royalFloat {
     0% {
       transform: translateY(0) translateX(0);
-      opacity: 0.3;
-    }
-    50% {
-      transform: translateY(-10px) translateX(5px);
-      opacity: 0.5;
-    }
-    100% {
-      transform: translateY(0) translateX(0);
-      opacity: 0.3;
-    }
-  }
-  
-  /* Simplified floatEnhanced animation */
-  @keyframes floatEnhanced {
-    0% {
-      transform: translate(0, 0);
-      opacity: 0.2;
-    }
-    50% {
-      transform: translate(10px, -5px);
       opacity: 0.4;
     }
+    50% {
+      transform: translateY(-15px) translateX(8px);
+      opacity: 0.7;
+    }
     100% {
-      transform: translate(0, 0);
-      opacity: 0.2;
+      transform: translateY(0) translateX(0);
+      opacity: 0.4;
     }
   }
   
-  /* Flowing wave animation */
-  @keyframes flowWave {
+  /* Enhanced floatEnhanced animation with royal colors */
+  @keyframes royalFloatEnhanced {
+    0% {
+      transform: translate(0, 0);
+      opacity: 0.3;
+    }
+    50% {
+      transform: translate(15px, -8px);
+      opacity: 0.6;
+    }
+    100% {
+      transform: translate(0, 0);
+      opacity: 0.3;
+    }
+  }
+  
+  /* Flowing wave animation with royal theme */
+  @keyframes royalFlowWave {
     0% {
       background-position: 0% 50%;
+      opacity: 0.7;
+    }
+    50% {
+      background-position: 100% 50%;
+      opacity: 0.9;
     }
     100% {
       background-position: 200% 50%;
+      opacity: 0.7;
     }
   }
   
-  /* Simplified gentlePulse animation */
-  @keyframes gentlePulse {
+  /* Gentle pulse with royal theme */
+  @keyframes royalGentlePulse {
     0%, 100% {
       transform: scale(1);
-      opacity: 0.3;
+      opacity: 0.4;
     }
     50% {
-      transform: scale(1.02);
-      opacity: 0.5;
+      transform: scale(1.03);
+      opacity: 0.7;
     }
   }
   
-  /* Simplified drift animation */
-  @keyframes drift {
+  /* Drift animation with royal theme */
+  @keyframes royalDrift {
     0%, 100% {
       transform: translate(0, 0);
+      opacity: 0.4;
     }
     25% {
-      transform: translate(5px, 2px);
+      transform: translate(8px, 3px);
+      opacity: 0.6;
     }
     50% {
-      transform: translate(10px, 0);
+      transform: translate(15px, 0);
+      opacity: 0.8;
     }
     75% {
-      transform: translate(5px, -2px);
+      transform: translate(8px, -3px);
+      opacity: 0.6;
     }
+  }
+  
+  /* New animations for enhanced visual appeal */
+  
+  /* Fade in down animation */
+  @keyframes fadeInDown {
+    from {
+      opacity: 0;
+      transform: translateY(-30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .animate-fade-in-down {
+    animation: fadeInDown 0.6s ease-out forwards;
+  }
+  
+  /* Fade in up animation */
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .animate-fade-in-up {
+    animation: fadeInUp 0.6s ease-out forwards;
+  }
+  
+  /* Fade in left animation */
+  @keyframes fadeInLeft {
+    from {
+      opacity: 0;
+      transform: translateX(-30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  
+  .animate-fade-in-left {
+    animation: fadeInLeft 0.6s ease-out forwards;
+  }
+  
+  /* Fade in right animation */
+  @keyframes fadeInRight {
+    from {
+      opacity: 0;
+      transform: translateX(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  
+  .animate-fade-in-right {
+    animation: fadeInRight 0.6s ease-out forwards;
+  }
+  
+  /* Slow bounce animation with royal theme */
+  @keyframes royalBounceSlow {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-15px);
+    }
+  }
+  
+  .animate-bounce-slow {
+    animation: royalBounceSlow 3s ease-in-out infinite;
+  }
+  
+  /* Slow pulse animation with royal theme */
+  @keyframes royalPulseSlow {
+    0%, 100% {
+      opacity: 1;
+      transform: scale(1);
+    }
+    50% {
+      opacity: 0.7;
+      transform: scale(1.02);
+    }
+  }
+  
+  .animate-pulse-slow {
+    animation: royalPulseSlow 2s ease-in-out infinite;
   }
   
   /* Staggered animation delays */
@@ -281,6 +407,54 @@
   
   .animate-delay-500 {
     animation-delay: 0.5s;
+  }
+  
+  /* Royal entrance animations */
+  @keyframes royalEntrance {
+    0% {
+      opacity: 0;
+      transform: translateY(50px) scale(0.9);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0) scale(1);
+    }
+  }
+  
+  .royal-entrance {
+    animation: royalEntrance 0.8s cubic-bezier(0.22, 0.61, 0.36, 1) forwards;
+  }
+  
+  /* Royal fade in with blur effect */
+  @keyframes royalFadeInBlur {
+    0% {
+      opacity: 0;
+      filter: blur(10px);
+    }
+    100% {
+      opacity: 1;
+      filter: blur(0);
+    }
+  }
+  
+  .royal-fade-in-blur {
+    animation: royalFadeInBlur 1s ease-out forwards;
+  }
+  
+  /* Royal shimmer effect */
+  @keyframes royalShimmer {
+    0% {
+      background-position: -200% 0;
+    }
+    100% {
+      background-position: 200% 0;
+    }
+  }
+  
+  .royal-shimmer {
+    background: linear-gradient(90deg, transparent, rgba(255, 215, 0, 0.3), transparent);
+    background-size: 200% 100%;
+    animation: royalShimmer 2s infinite;
   }
   
   .animated-background {
@@ -317,7 +491,7 @@
     height: 150px;
     top: 10%;
     left: 5%;
-    animation: floatEnhanced 15s ease-in-out infinite;
+    animation: royalFloatEnhanced 15s ease-in-out infinite;
   }
   
   .particle-2 {
@@ -325,7 +499,7 @@
     height: 100px;
     top: 70%;
     left: 80%;
-    animation: floatEnhanced 18s ease-in-out infinite reverse;
+    animation: royalFloatEnhanced 18s ease-in-out infinite reverse;
   }
   
   .particle-3 {
@@ -333,7 +507,7 @@
     height: 80px;
     top: 40%;
     left: 70%;
-    animation: floatEnhanced 12s ease-in-out infinite;
+    animation: royalFloatEnhanced 12s ease-in-out infinite;
   }
   
   .particle-4 {
@@ -341,7 +515,7 @@
     height: 120px;
     top: 80%;
     left: 20%;
-    animation: floatEnhanced 20s ease-in-out infinite reverse;
+    animation: royalFloatEnhanced 20s ease-in-out infinite reverse;
   }
   
   .particle-5 {
@@ -349,7 +523,7 @@
     height: 60px;
     top: 20%;
     left: 40%;
-    animation: floatEnhanced 14s ease-in-out infinite;
+    animation: royalFloatEnhanced 14s ease-in-out infinite;
   }
   
   .particle-6 {
@@ -357,7 +531,7 @@
     height: 90px;
     top: 60%;
     left: 60%;
-    animation: floatEnhanced 16s ease-in-out infinite reverse;
+    animation: royalFloatEnhanced 16s ease-in-out infinite reverse;
   }
   
   /* Additional particles for more depth */
@@ -366,7 +540,7 @@
     height: 70px;
     top: 30%;
     left: 15%;
-    animation: gentlePulse 8s ease-in-out infinite;
+    animation: royalGentlePulse 8s ease-in-out infinite;
   }
   
   .particle-8 {
@@ -374,7 +548,7 @@
     height: 50px;
     top: 75%;
     left: 40%;
-    animation: drift 12s ease-in-out infinite;
+    animation: royalDrift 12s ease-in-out infinite;
   }
   
   .particle-9 {
@@ -382,16 +556,40 @@
     height: 110px;
     top: 15%;
     left: 85%;
-    animation: gentlePulse 10s ease-in-out infinite reverse;
+    animation: royalGentlePulse 10s ease-in-out infinite reverse;
+  }
+  
+  .particle-10 {
+    width: 40px;
+    height: 40px;
+    top: 50%;
+    left: 10%;
+    animation: royalFloat 15s ease-in-out infinite;
+  }
+  
+  .particle-11 {
+    width: 90px;
+    height: 90px;
+    top: 25%;
+    left: 60%;
+    animation: royalDrift 18s ease-in-out infinite reverse;
+  }
+  
+  .particle-12 {
+    width: 60px;
+    height: 60px;
+    top: 70%;
+    left: 30%;
+    animation: royalGentlePulse 12s ease-in-out infinite;
   }
   
   /* Orb elements */
   .orb {
     position: absolute;
     border-radius: 50%;
-    background: radial-gradient(circle, rgba(250, 204, 21, 0.8) 0%, rgba(250, 204, 21, 0.2) 70%, transparent 100%);
+    background: radial-gradient(circle, rgba(250, 204, 21, 0.8) 0%, rgba(37, 27, 90, 0.4) 70%, transparent 100%);
     pointer-events: none;
-    filter: blur(1px);
+    filter: blur(2px);
     /* Performance optimizations */
     transform: translateZ(0);
     will-change: transform;
@@ -404,7 +602,7 @@
     height: 200px;
     top: 5%;
     left: 70%;
-    animation: float 25s ease-in-out infinite;
+    animation: royalFloat 25s ease-in-out infinite;
   }
   
   .orb-2 {
@@ -412,7 +610,7 @@
     height: 150px;
     top: 65%;
     left: 10%;
-    animation: float 30s ease-in-out infinite reverse;
+    animation: royalFloat 30s ease-in-out infinite reverse;
   }
   
   .orb-3 {
@@ -420,7 +618,23 @@
     height: 120px;
     top: 50%;
     left: 85%;
-    animation: float 20s ease-in-out infinite;
+    animation: royalFloat 20s ease-in-out infinite;
+  }
+  
+  .orb-4 {
+    width: 80px;
+    height: 80px;
+    top: 30%;
+    left: 20%;
+    animation: royalGentlePulse 15s ease-in-out infinite reverse;
+  }
+  
+  .orb-5 {
+    width: 100px;
+    height: 100px;
+    top: 80%;
+    left: 50%;
+    animation: royalDrift 20s ease-in-out infinite;
   }
 }
 
@@ -430,7 +644,8 @@
     background: linear-gradient(135deg, #0f0f1a 0%, #1a1a2e 100%);
     border: 1px solid #ffd724;
     color: #fdfdfd;
-    /* Removed transition */
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   }
   
   .btn-gold::before {
@@ -441,22 +656,31 @@
     width: 100%;
     height: 100%;
     background: linear-gradient(90deg, transparent, rgba(255, 215, 0, 0.3), transparent);
-    /* Removed transition */
+    transition: left 0.5s;
   }
   
-  /* Removed hover effect for btn-gold::before */
+  .btn-gold:hover::before {
+    left: 100%;
+  }
   
-  /* Removed hover effect for btn-gold */
+  .btn-gold:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 15px rgba(255, 215, 0, 0.4);
+  }
   
   .btn-royal {
     @apply px-6 py-3 rounded-lg font-semibold relative overflow-hidden;
     background: linear-gradient(135deg, #251b5a 0%, #1a1a2e 100%);
     border: 1px solid #ffd724;
     color: #fdfdfd;
-    /* Removed transition */
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   }
   
-  /* Removed hover effect for btn-royal */
+  .btn-royal:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 15px rgba(37, 27, 90, 0.4);
+  }
   
   .btn-royal-gold {
     @apply px-6 py-3 rounded-lg font-semibold relative overflow-hidden;
@@ -464,32 +688,46 @@
     border: 1px solid #251b5a;
     color: #0f0f1a;
     font-weight: 600;
-    /* Removed transition */
+    transition: all 0.3s ease;
+    transform: scale(1);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   }
   
-  /* Removed hover effect for btn-royal-gold */
+  .btn-royal-gold:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(255, 215, 0, 0.4);
+  }
   
   .card-glass {
     @apply glass-effect rounded-xl p-6;
     border: 1px solid rgba(255, 215, 0, 0.1);
-    /* Removed transition */
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   }
   
-  /* Removed hover effect for card-glass */
+  .card-glass:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(255, 215, 0, 0.3);
+  }
   
   .card-royal {
     @apply glass-effect-dark rounded-xl p-6;
     border: 1px solid rgba(37, 27, 90, 0.3);
-    /* Removed transition */
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   }
   
-  /* Removed hover effect for card-royal */
+  .card-royal:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(37, 27, 90, 0.4);
+  }
   
   .card-royal-gold {
     @apply rounded-xl p-6 relative overflow-hidden;
     background: linear-gradient(135deg, rgba(37, 27, 90, 0.9) 0%, rgba(26, 26, 46, 0.95) 100%);
     border: 1px solid rgba(255, 215, 0, 0.2);
-    /* Removed transition */
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   }
   
   .card-royal-gold::before {
@@ -502,145 +740,50 @@
     background: linear-gradient(90deg, transparent, #ffd724, transparent);
   }
   
-  /* Removed hover effect for card-royal-gold */
+  .card-royal-gold:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(255, 215, 0, 0.4);
+  }
   
   .input-gold {
     @apply w-full px-4 py-3 bg-royal-navy border border-silver-700 rounded-lg text-ivory focus:outline-none;
-    /* Removed transition */
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   }
   
-  /* Removed focus effects for input-gold */
+  .input-gold:focus {
+    border-color: #ffd724;
+    box-shadow: 0 0 0 2px rgba(255, 215, 0, 0.2);
+  }
   
   .floating-label {
     @apply absolute left-4 top-3 text-gold-500 pointer-events-none;
-    /* Removed transition */
+    transition: all 0.2s ease;
   }
   
   .floating-label.active {
     @apply top-0 text-xs bg-royal-dark px-1;
   }
   
-  /* Removed shine-effect animation */
-  
-  .royal-crown-accent {
+  .shine-effect {
     position: relative;
+    overflow: hidden;
   }
   
-  .royal-crown-accent::before {
-    content: '♔';
-    position: absolute;
-    top: -10px;
-    right: -10px;
-    font-size: 1.2rem;
-    color: #ffd724;
-    /* Removed text-shadow animation */
-  }
-  
-  .luxury-badge {
-    @apply inline-block px-3 py-1 text-xs font-semibold rounded-full;
-    background: linear-gradient(135deg, #ffd724 0%, #e6c200 100%);
-    color: #0f0f1a;
-  }
-}
-
-/* Additional component layer */
-@layer components {
-  .btn-gold {
-    @apply px-6 py-3 rounded-lg font-semibold relative overflow-hidden;
-    background: linear-gradient(135deg, #0f0f1a 0%, #1a1a2e 100%);
-    border: 1px solid #ffd724;
-    color: #fdfdfd;
-    /* Removed transition */
-  }
-  
-  .btn-gold::before {
+  .shine-effect::before {
     content: '';
     position: absolute;
     top: 0;
     left: -100%;
     width: 100%;
     height: 100%;
-    background: linear-gradient(90deg, transparent, rgba(255, 215, 0, 0.3), transparent);
-    /* Removed transition */
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: left 0.5s;
   }
   
-  /* Removed hover effect for btn-gold::before */
-  
-  /* Removed hover effect for btn-gold */
-  
-  .btn-royal {
-    @apply px-6 py-3 rounded-lg font-semibold relative overflow-hidden;
-    background: linear-gradient(135deg, #251b5a 0%, #1a1a2e 100%);
-    border: 1px solid #ffd724;
-    color: #fdfdfd;
-    /* Removed transition */
+  .shine-effect:hover::before {
+    left: 100%;
   }
-  
-  /* Removed hover effect for btn-royal */
-  
-  .btn-royal-gold {
-    @apply px-6 py-3 rounded-lg font-semibold relative overflow-hidden;
-    background: linear-gradient(135deg, #ffd724 0%, #e6c200 100%);
-    border: 1px solid #251b5a;
-    color: #0f0f1a;
-    font-weight: 600;
-    /* Removed transition */
-  }
-  
-  /* Removed hover effect for btn-royal-gold */
-  
-  .card-glass {
-    @apply glass-effect rounded-xl p-6;
-    border: 1px solid rgba(255, 215, 0, 0.1);
-    /* Removed transition */
-  }
-  
-  /* Removed hover effect for card-glass */
-  
-  .card-royal {
-    @apply glass-effect-dark rounded-xl p-6;
-    border: 1px solid rgba(37, 27, 90, 0.3);
-    /* Removed transition */
-  }
-  
-  /* Removed hover effect for card-royal */
-  
-  .card-royal-gold {
-    @apply rounded-xl p-6 relative overflow-hidden;
-    background: linear-gradient(135deg, rgba(37, 27, 90, 0.9) 0%, rgba(26, 26, 46, 0.95) 100%);
-    border: 1px solid rgba(255, 215, 0, 0.2);
-    /* Removed transition */
-  }
-  
-  .card-royal-gold::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 2px;
-    background: linear-gradient(90deg, transparent, #ffd724, transparent);
-  }
-  
-  /* Removed hover effect for card-royal-gold */
-  
-  .input-gold {
-    @apply w-full px-4 py-3 bg-royal-navy border border-silver-700 rounded-lg text-ivory focus:outline-none;
-    /* Removed transition */
-  }
-  
-  /* Removed focus effects for input-gold */
-  
-  .floating-label {
-    @apply absolute left-4 top-3 text-gold-500 pointer-events-none;
-    /* Removed transition */
-  }
-  
-  .floating-label.active {
-    @apply top-0 text-xs bg-royal-dark px-1;
-  }
-  
-  /* Removed shine-effect animation */
   
   .royal-crown-accent {
     position: relative;
@@ -653,12 +796,102 @@
     right: -10px;
     font-size: 1.2rem;
     color: #ffd724;
-    /* Removed text-shadow animation */
+    animation: glow-pulse 2s ease-in-out infinite;
   }
   
   .luxury-badge {
     @apply inline-block px-3 py-1 text-xs font-semibold rounded-full;
     background: linear-gradient(135deg, #ffd724 0%, #e6c200 100%);
     color: #0f0f1a;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Process step card enhancements */
+  .process-step-card {
+    @apply glass-effect rounded-xl p-6 border;
+    border: 1px solid rgba(255, 215, 0, 0.2);
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .process-step-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #ffd724, transparent);
+  }
+  
+  .process-step-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 25px rgba(255, 215, 0, 0.4);
+  }
+  
+  /* Step number enhancements */
+  .step-number {
+    @apply w-10 h-10 rounded-full flex items-center justify-center font-bold text-lg;
+    background: linear-gradient(135deg, #ffd724 0%, #e6c200 100%);
+    color: #0f0f1a;
+    box-shadow: 0 4px 6px rgba(255, 215, 0, 0.3);
+    position: relative;
+    z-index: 10;
+    animation: glow-pulse 2s ease-in-out infinite;
+  }
+  
+  /* Timeline connector enhancements */
+  .timeline-line {
+    position: absolute;
+    left: 20px;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: linear-gradient(to bottom, transparent, #ffd724, transparent);
+  }
+  
+  @media (min-width: 768px) {
+    .timeline-line {
+      left: 50%;
+      transform: translateX(-1px);
+    }
+  }
+  
+  /* Process section enhancements */
+  .process-section {
+    position: relative;
+  }
+  
+  .process-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(circle at center, rgba(255, 215, 0, 0.05) 0%, transparent 70%);
+    z-index: -1;
+  }
+  
+  /* Royal divider with enhanced styling */
+  .royal-divider-enhanced {
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #251b5a, #ffd724, #251b5a, transparent);
+    margin: 2rem 0;
+    position: relative;
+  }
+  
+  .royal-divider-enhanced::after {
+    content: '♔';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #ffd724;
+    font-size: 1.2rem;
+    background: #0f0f1a;
+    padding: 0 10px;
   }
 }

@@ -96,7 +96,7 @@ const Portfolio = () => {
           {filteredProjects.map((project, index) => (
             <div
               key={project.id}
-              className="card-glass cursor-pointer overflow-hidden hover:scale-105 transition-transform duration-300"
+              className="card-glass cursor-pointer overflow-hidden react-icon"
               onClick={() => setSelectedProject(project)}
               data-aos="fade-up"
               data-aos-delay={400 + index * 100}
@@ -105,7 +105,7 @@ const Portfolio = () => {
                 <img
                   src={project.image}
                   alt={project.title}
-                  className="w-full h-60 object-cover transition-transform duration-500 hover:scale-110"
+                  className="w-full h-60 object-cover react-icon"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-royal-dark to-transparent opacity-80"></div>
                 <div className="absolute bottom-4 left-4">
@@ -148,10 +148,10 @@ const Portfolio = () => {
                   <h3 className="text-3xl font-bold text-ivory mt-2">{selectedProject.title}</h3>
                 </div>
                 <button 
-                  className="text-ivory hover:text-gold-400 text-2xl"
+                  className="text-ivory hover:text-gold-400 text-2xl react-icon"
                   onClick={() => setSelectedProject(null)}
                 >
-                  <FiX />
+                  <FiX className="react-icon" />
                 </button>
               </div>
               
