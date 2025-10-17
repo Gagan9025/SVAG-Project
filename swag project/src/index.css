@@ -1129,6 +1129,10 @@
   }
   
   /* Larger touch targets for mobile */
+  .touch\:min-h-8 {
+    min-height: 2rem;
+  }
+  
   .touch\:min-h-10 {
     min-height: 2.5rem;
   }
@@ -1141,12 +1145,32 @@
     min-height: 3.5rem;
   }
   
+  .touch\:min-h-16 {
+    min-height: 4rem;
+  }
+  
+  .touch\:min-w-8 {
+    min-width: 2rem;
+  }
+  
   .touch\:min-w-10 {
     min-width: 2.5rem;
   }
   
   .touch\:min-w-12 {
     min-width: 3rem;
+  }
+  
+  .touch\:min-w-14 {
+    min-width: 3.5rem;
+  }
+  
+  .touch\:min-w-16 {
+    min-width: 4rem;
+  }
+  
+  .touch\:p-2 {
+    padding: 0.5rem;
   }
   
   .touch\:p-3 {
@@ -1161,6 +1185,14 @@
     padding: 1.25rem;
   }
   
+  .touch\:p-6 {
+    padding: 1.5rem;
+  }
+  
+  .touch\:text-sm {
+    font-size: 0.875rem;
+  }
+  
   .touch\:text-base {
     font-size: 1rem;
   }
@@ -1171,6 +1203,38 @@
   
   .touch\:text-xl {
     font-size: 1.25rem;
+  }
+  
+  .touch\:text-2xl {
+    font-size: 1.5rem;
+  }
+  
+  /* Enhanced touch interactions */
+  .touch\:active-scale-sm:active {
+    transform: scale(0.98) !important;
+  }
+  
+  .touch\:active-scale-md:active {
+    transform: scale(0.95) !important;
+  }
+  
+  .touch\:active-scale-lg:active {
+    transform: scale(0.92) !important;
+  }
+  
+  /* Touch-friendly button enhancements */
+  .touch\:btn-enhanced {
+    min-height: 3rem;
+    min-width: 3rem;
+    padding: 1rem 1.5rem;
+    border-radius: 0.625rem;
+  }
+  
+  /* Touch-friendly card enhancements */
+  .touch\:card-enhanced {
+    min-height: 2.5rem;
+    padding: 1.25rem;
+    border-radius: 0.75rem;
   }
 }
 
@@ -1203,70 +1267,168 @@
     width: 100%;
   }
   
-  .mobile\:mb-4 {
-    margin-bottom: 1rem;
+  .mobile\:mb-20 {
+    margin-bottom: 5rem;
   }
   
-  .mobile\:mb-5 {
-    margin-bottom: 1.25rem;
+  .mobile\:mb-16 {
+    margin-bottom: 4rem;
   }
   
-  .mobile\:mb-6 {
-    margin-bottom: 1.5rem;
+  .mobile\:mb-12 {
+    margin-bottom: 3rem;
   }
   
   .mobile\:mb-10 {
     margin-bottom: 2.5rem;
   }
   
-  .mobile\:p-4 {
-    padding: 1rem;
+  .mobile\:mb-8 {
+    margin-bottom: 2rem;
+  }
+  
+  .mobile\:mb-6 {
+    margin-bottom: 1.5rem;
+  }
+  
+  .mobile\:mb-4 {
+    margin-bottom: 1rem;
+  }
+  
+  .mobile\:p-8 {
+    padding: 2rem;
+  }
+  
+  .mobile\:p-6 {
+    padding: 1.5rem;
   }
   
   .mobile\:p-5 {
     padding: 1.25rem;
   }
   
-  .mobile\:gap-3 {
-    gap: 0.75rem;
+  .mobile\:p-4 {
+    padding: 1rem;
   }
   
-  .mobile\:gap-4 {
-    gap: 1rem;
+  .mobile\:gap-10 {
+    gap: 2.5rem;
+  }
+  
+  .mobile\:gap-8 {
+    gap: 2rem;
   }
   
   .mobile\:gap-6 {
     gap: 1.5rem;
   }
   
-  .mobile\:text-2xl {
-    font-size: 1.5rem;
+  .mobile\:gap-4 {
+    gap: 1rem;
+  }
+  
+  .mobile\:gap-3 {
+    gap: 0.75rem;
+  }
+  
+  .mobile\:gap-2 {
+    gap: 0.5rem;
+  }
+  
+  /* Enhanced mobile typography */
+  .mobile\:text-5xl {
+    font-size: 3rem; /* 48px */
+    line-height: 1.1;
+  }
+  
+  .mobile\:text-4xl {
+    font-size: 2.25rem; /* 36px */
+    line-height: 1.2;
+  }
+  
+  .mobile\:text-3xl {
+    font-size: 1.875rem; /* 30px */
     line-height: 1.25;
   }
   
-  .mobile\:text-xl {
-    font-size: 1.25rem;
+  .mobile\:text-2xl {
+    font-size: 1.5rem; /* 24px */
     line-height: 1.3;
   }
   
-  .mobile\:text-lg {
-    font-size: 1.125rem;
+  .mobile\:text-xl {
+    font-size: 1.25rem; /* 20px */
     line-height: 1.35;
   }
   
-  .mobile\:text-base {
-    font-size: 1rem;
+  .mobile\:text-lg {
+    font-size: 1.125rem; /* 18px */
     line-height: 1.4;
   }
   
-  .mobile\:text-sm {
-    font-size: 0.875rem;
+  .mobile\:text-base {
+    font-size: 1rem; /* 16px */
     line-height: 1.45;
   }
   
-  .mobile\:text-xs {
-    font-size: 0.75rem;
+  .mobile\:text-sm {
+    font-size: 0.875rem; /* 14px */
     line-height: 1.5;
+  }
+  
+  .mobile\:text-xs {
+    font-size: 0.75rem; /* 12px */
+    line-height: 1.55;
+  }
+  
+  /* Mobile section padding adjustments */
+  .mobile\:section-py {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+  }
+  
+  .mobile\:section-pt {
+    padding-top: 3rem;
+  }
+  
+  .mobile\:section-pb {
+    padding-bottom: 3rem;
+  }
+  
+  /* Mobile card enhancements */
+  .mobile\:card-enhanced {
+    padding: 1.5rem;
+    border-radius: 0.875rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  /* Mobile button enhancements */
+  .mobile\:btn-enhanced {
+    padding: 1rem 1.5rem;
+    font-size: 1.125rem;
+    border-radius: 0.625rem;
+  }
+  
+  /* Mobile grid adjustments */
+  .mobile\:grid-cols-1 {
+    grid-template-columns: 1fr;
+  }
+  
+  .mobile\:grid-cols-2 {
+    grid-template-columns: 1fr 1fr;
+  }
+  
+  /* Mobile flex adjustments */
+  .mobile\:flex-col-reverse {
+    flex-direction: column-reverse;
+  }
+  
+  .mobile\:items-start {
+    align-items: flex-start;
+  }
+  
+  .mobile\:items-end {
+    align-items: flex-end;
   }
   
   /* Mobile page separation enhancements */
@@ -1284,52 +1446,52 @@
   }
   
   .mobile\:page-section {
-    margin-bottom: 2rem;
-    padding: 1.5rem 1rem;
-    border-radius: 0.5rem;
+    margin-bottom: 2.5rem;
+    padding: 1.75rem 1.25rem;
+    border-radius: 0.75rem;
     background: rgba(26, 26, 46, 0.5);
     backdrop-filter: blur(10px);
   }
   
   .mobile\:page-title {
-    font-size: 1.75rem;
-    margin-bottom: 1.5rem;
+    font-size: 2rem;
+    margin-bottom: 1.75rem;
     text-align: center;
-    padding: 0 1rem;
+    padding: 0 1.25rem;
   }
   
   .mobile\:page-subtitle {
-    font-size: 1.25rem;
-    margin-bottom: 1rem;
+    font-size: 1.375rem;
+    margin-bottom: 1.25rem;
     text-align: center;
   }
   
   .mobile\:content-block {
-    margin-bottom: 1.5rem;
-    padding: 1rem;
-    border-radius: 0.75rem;
+    margin-bottom: 1.75rem;
+    padding: 1.25rem;
+    border-radius: 0.875rem;
     background: rgba(15, 15, 26, 0.7);
   }
   
   .mobile\:content-title {
-    font-size: 1.25rem;
-    margin-bottom: 0.75rem;
+    font-size: 1.375rem;
+    margin-bottom: 1rem;
     color: #ffd724;
   }
   
   .mobile\:content-text {
-    font-size: 1rem;
-    line-height: 1.6;
-    margin-bottom: 1rem;
+    font-size: 1.125rem;
+    line-height: 1.65;
+    margin-bottom: 1.25rem;
   }
   
   .mobile\:feature-list {
-    padding-left: 1.5rem;
-    margin-bottom: 1rem;
+    padding-left: 1.75rem;
+    margin-bottom: 1.25rem;
   }
   
   .mobile\:feature-item {
-    margin-bottom: 0.5rem;
-    font-size: 0.95rem;
+    margin-bottom: 0.75rem;
+    font-size: 1rem;
   }
 }
