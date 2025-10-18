@@ -1,6 +1,5 @@
 import React from 'react';
 import { FiArrowRight, FiBox, FiGlobe, FiBarChart2, FiFilm } from 'react-icons/fi';
-import { BackgroundBeams } from './ui/background-beams';
 
 const Services = () => {
   const services = [
@@ -37,7 +36,6 @@ const Services = () => {
   return (
     <section id="services" className="py-12 xs:py-16 md:py-20 relative">
       <div className="absolute inset-0 bg-gradient-to-b from-royal-blue to-royal-dark z-0"></div>
-      <BackgroundBeams className="absolute inset-0 z-0" showStaticBeams={false} />
       <div className="container mx-auto px-4 relative z-10">
         {/* Adding "Our Services" heading */}
         <div className="text-center mb-4 animate-fade-in-down">
