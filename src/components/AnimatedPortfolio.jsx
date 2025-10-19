@@ -103,23 +103,23 @@ const AnimatedPortfolio = () => {
   };
 
   return (
-    <section className="py-20 relative">
+    <section className="py-20 relative mobile:py-16 tablet:py-20 desktop:py-24 large:py-32">
       <div className="absolute inset-0 bg-gradient-to-b from-royal-dark to-royal-blue z-0"></div>
       <div className="container mx-auto px-4 relative z-10">
         <motion.div 
-          className="text-center mb-16"
+          className="text-center mb-16 mobile:mb-12 tablet:mb-16 desktop:mb-20 large:mb-24"
           initial={{ opacity: 0, y: -20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
         >
-          <h2 className="text-4xl md:text-5xl font-extrabold mb-4 relative inline-block font-heading text-gold-400">
+          <h2 className="text-4xl md:text-5xl font-extrabold mb-4 relative inline-block font-heading text-gold-400 mobile:text-3xl tablet:text-4xl desktop:text-5xl large:text-6xl">
             FEATURED WORK
             <span className="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-gold-400 to-transparent"></span>
           </h2>
-          <div className="flex justify-center my-4">
+          <div className="flex justify-center my-4 mobile:my-3 tablet:my-4 desktop:my-5 large:my-6">
             <motion.div 
-              className="w-8 h-1 bg-gold-400 rounded-full"
+              className="w-8 h-1 bg-gold-400 rounded-full mobile:w-6 tablet:w-8 desktop:w-10 large:w-12"
               initial={{ scaleX: 0 }}
               whileInView={{ scaleX: 1 }}
               transition={{ duration: 0.8, delay: 0.2 }}
@@ -127,7 +127,7 @@ const AnimatedPortfolio = () => {
             ></motion.div>
           </div>
           <motion.p 
-            className="text-xl text-gold-300 mt-4 max-w-3xl mx-auto font-sans"
+            className="text-xl text-gold-300 mt-4 max-w-3xl mx-auto font-sans mobile:text-lg tablet:text-xl desktop:text-2xl large:text-3xl"
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             transition={{ duration: 0.6, delay: 0.4 }}
@@ -138,7 +138,7 @@ const AnimatedPortfolio = () => {
         </motion.div>
 
         <motion.div 
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mobile:gap-6 tablet:gap-8 desktop:gap-10 large:gap-12"
           variants={containerVariants}
           initial="hidden"
           whileInView="visible"
@@ -147,7 +147,7 @@ const AnimatedPortfolio = () => {
           {portfolioItems.map((item, index) => (
             <motion.div 
               key={index}
-              className="card-glass overflow-hidden"
+              className="card-glass overflow-hidden mobile:card-enhanced tablet:card-enhanced desktop:card-enhanced large:card-enhanced"
               variants={itemVariants}
               whileHover="hover"
               whileTap={{ scale: 0.98 }}
@@ -156,33 +156,33 @@ const AnimatedPortfolio = () => {
                 <motion.img 
                   src={item.image} 
                   alt={item.title} 
-                  className="w-full h-60 object-cover"
+                  className="w-full h-60 object-cover mobile:h-48 tablet:h-56 desktop:h-64 large:h-72"
                   variants={imageVariants}
                   whileHover="hover"
                 />
                 <motion.div 
-                  className="absolute top-4 right-4 bg-gold-400 text-royal-dark px-3 py-1 rounded-full text-sm font-semibold"
+                  className="absolute top-4 right-4 bg-gold-400 text-royal-dark px-3 py-1 rounded-full text-sm font-semibold mobile:top-3 mobile:right-3 mobile:px-2.5 mobile:py-1 mobile:text-xs tablet:top-4 tablet:right-4 tablet:px-3 tablet:py-1 tablet:text-sm desktop:top-5 desktop:right-5 desktop:px-4 desktop:py-1.5 desktop:text-base large:top-6 large:right-6 large:px-5 large:py-2 large:text-lg"
                   variants={categoryVariants}
                   whileHover="hover"
                 >
                   {item.category}
                 </motion.div>
               </div>
-              <div className="p-6">
+              <div className="p-6 mobile:p-5 tablet:p-6 desktop:p-7 large:p-8">
                 <motion.h3 
-                  className="text-xl font-bold mb-2 text-ivory"
+                  className="text-xl font-bold mb-2 text-ivory mobile:text-lg tablet:text-xl desktop:text-2xl large:text-3xl"
                   whileHover={{}}
                   transition={{ type: "spring", stiffness: 300 }}
                 >
                   {item.title}
                 </motion.h3>
                 <motion.button 
-                  className="text-gold-400 font-semibold flex items-center group react-icon"
+                  className="text-gold-400 font-semibold flex items-center group react-icon mobile:text-sm tablet:text-base desktop:text-lg large:text-xl"
                   whileHover={{}}
                   whileTap={{ scale: 1 }}
                 >
                   View Project
-                  <svg xmlns="http://www.w3.org/2000/svg" className="ml-2 react-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                  <svg xmlns="http://www.w3.org/2000/svg" className="ml-2 react-icon mobile:w-4 mobile:h-4 tablet:w-5 tablet:h-5 desktop:w-6 desktop:h-6 large:w-7 large:h-7" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                     <line x1="5" y1="12" x2="19" y2="12"></line>
                     <polyline points="12 5 19 12 12 19"></polyline>
                   </svg>
@@ -193,14 +193,14 @@ const AnimatedPortfolio = () => {
         </motion.div>
 
         <motion.div 
-          className="text-center mt-12"
+          className="text-center mt-12 mobile:mt-10 tablet:mt-12 desktop:mt-16 large:mt-20"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.3 }}
           viewport={{ once: true }}
         >
           <motion.button 
-            className="btn-royal-gold px-8 py-4 text-lg react-icon"
+            className="btn-royal-gold px-8 py-4 text-lg react-icon mobile:btn-full mobile:px-6 mobile:py-3 mobile:text-base tablet:btn-enhanced tablet:px-8 tablet:py-4 tablet:text-lg desktop:btn-enhanced desktop:px-10 desktop:py-5 desktop:text-xl large:btn-enhanced large:px-12 large:py-6 large:text-2xl"
             whileHover={{}}
             whileTap={{ scale: 1 }}
           >
