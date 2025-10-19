@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { FiPhone, FiMail, FiSend } from 'react-icons/fi';
-import { BackgroundBeams } from './ui/background-beams';
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -27,7 +26,6 @@ const Contact = () => {
   return (
     <section id="contact" className="py-16 md:py-20 relative">
       <div className="absolute inset-0 bg-gradient-to-b from-royal-dark to-royal-blue z-0"></div>
-      <BackgroundBeams className="absolute inset-0 z-0" showStaticBeams={false} />
       <div className="container mx-auto px-4 relative z-10">
         {/* Custom bold heading for "Ready to Start?" */}
         <div className="mb-12 md:mb-16 text-center animate-fade-in-down">

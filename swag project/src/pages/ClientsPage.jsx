@@ -4,32 +4,80 @@ import Footer from '../components/Footer';
 import BackToTop from '../components/BackToTop';
 
 const ClientsPage = () => {
-  // Client data
+  // Client data with temporary logos
   const clients = [
-    "EAS Traders",
-    "Top Hill",
-    "Calibre Engineering",
-    "Qatar Corp",
-    "EAS Traders",
-    "Top Hill",
-    "Calibre Engineering",
-    "Qatar Corp",
-    "EAS Traders",
-    "Top Hill",
-    "Calibre Engineering",
-    "Qatar Corp",
-    "EAS Traders",
-    "Top Hill",
-    "Calibre Engineering",
-    "Qatar Corp",
-    "EAS Traders",
-    "Top Hill",
-    "Calibre Engineering",
-    "Qatar Corp",
-    "EAS Traders",
-    "Top Hill",
-    "Calibre Engineering",
-    "Qatar Corp"
+    {
+      name: "EAS Traders",
+      logo: "https://via.placeholder.com/200x100/251b5a/ffffff?text=EAS+TRADERS"
+    },
+    {
+      name: "Top Hill",
+      logo: "https://via.placeholder.com/200x100/1a1a2e/ffd724?text=TOP+HILL"
+    },
+    {
+      name: "Calibre Engineering",
+      logo: "https://via.placeholder.com/200x100/0f0f1a/ffffff?text=CALIBRE"
+    },
+    {
+      name: "Qatar Corp",
+      logo: "https://via.placeholder.com/200x100/161625/ffd724?text=QATAR+CORP"
+    },
+    {
+      name: "TechFlow Solutions",
+      logo: "https://via.placeholder.com/200x100/251b5a/ffffff?text=TECHFLOW"
+    },
+    {
+      name: "InnovateLab",
+      logo: "https://via.placeholder.com/200x100/1a1a2e/ffd724?text=INNOVATELAB"
+    },
+    {
+      name: "StyleHub",
+      logo: "https://via.placeholder.com/200x100/0f0f1a/ffffff?text=STYLEHUB"
+    },
+    {
+      name: "Green Energy Co",
+      logo: "https://via.placeholder.com/200x100/161625/ffd724?text=GREEN+ENERGY"
+    },
+    {
+      name: "Finance First",
+      logo: "https://via.placeholder.com/200x100/251b5a/ffffff?text=FINANCE+FIRST"
+    },
+    {
+      name: "Health Plus",
+      logo: "https://via.placeholder.com/200x100/1a1a2e/ffd724?text=HEALTH+PLUS"
+    },
+    {
+      name: "EduTech Solutions",
+      logo: "https://via.placeholder.com/200x100/0f0f1a/ffffff?text=EDUTECH"
+    },
+    {
+      name: "LogiFlow",
+      logo: "https://via.placeholder.com/200x100/161625/ffd724?text=LOGIFLOW"
+    },
+    {
+      name: "TechFlow Solutions",
+      logo: "https://via.placeholder.com/200x100/251b5a/ffffff?text=TECHFLOW"
+    },
+    {
+      name: "InnovateLab",
+      logo: "https://via.placeholder.com/200x100/1a1a2e/ffd724?text=INNOVATELAB"
+    },
+    {
+      name: "StyleHub",
+      logo: "https://via.placeholder.com/200x100/0f0f1a/ffffff?text=STYLEHUB"
+    },
+    {
+      name: "Green Energy Co",
+      logo: "https://via.placeholder.com/200x100/161625/ffd724?text=GREEN+ENERGY"
+    },
+    {
+      name: "Finance First",
+      logo: "https://via.placeholder.com/200x100/251b5a/ffffff?text=FINANCE+FIRST"
+    },
+    {
+      name: "Health Plus",
+      logo: "https://via.placeholder.com/200x100/1a1a2e/ffd724?text=HEALTH+PLUS"
+    },
   ];
 
   return (
@@ -57,33 +105,29 @@ const ClientsPage = () => {
         <section className="py-20 relative">
           <div className="absolute inset-0 bg-gradient-to-b from-royal-blue to-royal-dark z-0"></div>
           <div className="container mx-auto px-4 relative z-10">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl md:text-5xl font-extrabold mb-4 relative inline-block font-heading text-gold-400">
-                TRUSTED PARTNERS
-                <span className="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-gold-400 to-transparent"></span>
-              </h2>
-              <div className="flex justify-center my-4">
-                <div className="w-8 h-1 bg-gold-400 rounded-full"></div>
-              </div>
-              <p className="text-xl text-gold-300 mt-4 max-w-3xl mx-auto font-sans">
-                We're proud to work with innovative companies across various industries
-              </p>
-            </div>
-            
-            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
+            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6 gap-8">
               {clients.map((client, index) => (
                 <div
                   key={index}
-                  className="card-glass text-center p-6 hover:scale-105 transition-transform duration-300 flex items-center justify-center"
+                  className="group relative bg-royal-navy/20 backdrop-blur-sm border border-gold-400/20 hover:border-gold-400/50 rounded-xl p-6 transition-all duration-300 hover:scale-105 hover:shadow-xl hover:bg-royal-navy/30 flex items-center justify-center"
                   data-aos="fade-up"
                   data-aos-delay={100 + (index % 8) * 50}
                 >
-                  <h3 className="text-xl font-bold text-ivory">{client}</h3>
+                  {/* Client Logo */}
+                  <img
+                    src={client.logo}
+                    alt={client.name}
+                    className="max-w-full max-h-16 object-contain filter brightness-0 invert opacity-70 group-hover:opacity-100 transition-all duration-300"
+                  />
+                  
+                  {/* Hover Effect */}
+                  <div className="absolute inset-0 bg-gradient-to-br from-gold-400/5 to-transparent rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                 </div>
               ))}
             </div>
           </div>
         </section>
+
       </main>
       <Footer />
       <BackToTop />

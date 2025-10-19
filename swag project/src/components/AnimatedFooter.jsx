@@ -4,11 +4,12 @@ import { FiFacebook, FiTwitter, FiInstagram, FiLinkedin, FiMail, FiPhone } from 
 
 const AnimatedFooter = () => {
   const quickLinks = [
-    { name: 'Home', href: '#home' },
-    { name: 'About', href: '#about' },
-    { name: 'Services', href: '#services' },
-    { name: 'Our Work', href: '#portfolio' },
-    { name: 'Contact', href: '#contact' }
+    { name: 'Home', href: '/' },
+    { name: 'About', href: '/about' },
+    { name: 'What We Do', href: '/what-we-do' },
+    { name: 'Services', href: '/services'},
+    { name: 'Portfolio', href: '/portfolio' },
+    { name: 'Contact', href: '/contact' },
   ];
 
   const services = [
