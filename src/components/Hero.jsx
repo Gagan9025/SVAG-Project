@@ -51,7 +51,7 @@ const Hero = () => {
               <AnimatedButton 
                 variant="gold" 
                 icon={<FiArrowRight />}
-                className="group glow-pulse w-full xs:w-auto touch:min-h-12 touch:min-w-12 touch:p-4 touch:text-lg"
+                className="group glow-pulse w-full xs:w-auto touch:min-h-14 touch:min-w-14 touch:p-5 touch:text-xl touch:active-scale-md touch:btn-enhanced"
               >
                 Get Started
               </AnimatedButton>
@@ -59,7 +59,7 @@ const Hero = () => {
               <AnimatedButton 
                 variant="royal" 
                 icon={<FiArrowRight />}
-                className="group w-full xs:w-auto touch:min-h-12 touch:min-w-12 touch:p-4 touch:text-lg"
+                className="group w-full xs:w-auto touch:min-h-14 touch:min-w-14 touch:p-5 touch:text-xl touch:active-scale-md touch:btn-enhanced"
               >
                 View Our Work
               </AnimatedButton>
@@ -77,23 +77,23 @@ const Hero = () => {
                   <AnimatedCard
                     key={i}
                     variant="royal"
-                    className="bg-royal-navy rounded-xl p-3 xs:p-4 md:p-6 border border-gold-400/10 hover:scale-105 transition-all duration-300 animate-fade-in-up touch:min-h-24 touch:min-w-24 touch:p-4"
+                    className="bg-royal-navy rounded-xl p-4 xs:p-5 md:p-6 border border-gold-400/10 hover:scale-105 transition-all duration-300 animate-fade-in-up touch:min-h-28 touch:min-w-28 touch:p-5 touch:active-scale-md touch:card-enhanced"
                     data-aos="zoom-in"
                     data-aos-delay={700 + i * 100}
                   >
-                    <div className="text-xl xs:text-2xl md:text-3xl text-gold-400 mb-2 xs:mb-3 md:mb-4 animate-bounce-slow">
+                    <div className="text-2xl xs:text-3xl md:text-4xl text-gold-400 mb-3 xs:mb-4 md:mb-5 animate-bounce-slow">
                       {i === 0 && <FiBox />}
                       {i === 1 && <FiGlobe />}
                       {i === 2 && <FiSmartphone />}
                       {i === 3 && <FiFilm />}
                     </div>
-                    <h3 className="text-base xs:text-lg md:text-xl font-semibold mb-1 xs:mb-2 text-gold-300">
+                    <h3 className="text-lg xs:text-xl md:text-2xl font-semibold mb-2 xs:mb-3 text-gold-300">
                       {i === 0 && 'Brand Identity'}
                       {i === 1 && 'Digital Strategy'}
                       {i === 2 && 'Web Development'}
                       {i === 3 && 'Motion Design'}
                     </h3>
-                    <p className="text-xs sm:text-sm text-silver-400">
+                    <p className="text-sm sm:text-base text-silver-400">
                       {i === 0 && 'Creating memorable brands that command attention.'}
                       {i === 1 && 'Aligning digital presence with business strategy.'}
                       {i === 2 && 'Performance-driven web design that converts.'}

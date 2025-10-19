@@ -20,9 +20,9 @@ const AnimatedButton = ({
   
   // Size variants
   const sizeClasses = {
-    sm: "px-4 py-2 text-sm",
-    md: "px-6 py-3",
-    lg: "px-8 py-4 text-lg"
+    sm: "px-4 py-2 text-sm touch:p-3 touch:text-base touch:min-h-10",
+    md: "px-6 py-3 touch:p-4 touch:min-h-12",
+    lg: "px-8 py-4 text-lg touch:p-5 touch:text-xl touch:min-h-14"
   };
   
   // Animation variants
@@ -36,6 +36,7 @@ const AnimatedButton = ({
         : "0 4px 6px rgba(0, 0, 0, 0.1)"
     },
     hover: { 
+      scale: 1.05,
       boxShadow: variant === "gold" 
         ? "0 8px 15px rgba(255, 215, 0, 0.4)" 
         : variant === "royal" 
@@ -43,6 +44,7 @@ const AnimatedButton = ({
         : "0 8px 20px rgba(255, 215, 0, 0.4)"
     },
     tap: { 
+      scale: 0.95,
       boxShadow: variant === "gold" 
         ? "0 2px 4px rgba(255, 215, 0, 0.2)" 
         : variant === "royal" 
@@ -53,7 +55,7 @@ const AnimatedButton = ({
   
   return (
     <motion.button
-      className={`${buttonVariants[variant]} ${sizeClasses[size]} ${className} relative overflow-hidden flex items-center justify-center`}
+      className={`${buttonVariants[variant]} ${sizeClasses[size]} ${className} relative overflow-hidden flex items-center justify-center touch:active-scale`}
       variants={buttonAnimationVariants}
       whileHover="hover"
       whileTap="tap"
@@ -64,7 +66,7 @@ const AnimatedButton = ({
       disabled={disabled}
       {...props}
     >
-      {icon && <span className="mr-2 react-icon">{icon}</span>}
+      {icon && <span className="mr-2 react-icon touch:text-lg">{icon}</span>}
       {children}
       {variant === "gold" && (
         <motion.span

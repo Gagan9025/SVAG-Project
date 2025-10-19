@@ -141,14 +141,14 @@ const Navbar = () => {
 
         {/* Mobile Menu Button */}
         <button 
-          className="md:hidden text-ivory z-50 p-2 rounded-lg hover:bg-royal-navy transition-all duration-300 react-icon menu-button focus:outline-none focus:ring-2 focus:ring-gold-400 touch:min-h-12 touch:min-w-12 touch:p-3"
+          className="md:hidden text-ivory z-50 p-3 rounded-lg hover:bg-royal-navy transition-all duration-300 react-icon menu-button focus:outline-none focus:ring-2 focus:ring-gold-400 touch:min-h-14 touch:min-w-14 touch:p-4 touch:active-scale-md"
           onClick={() => setIsOpen(!isOpen)}
           data-aos="fade-down"
           data-aos-delay="200"
           aria-label={isOpen ? "Close menu" : "Open menu"}
           aria-expanded={isOpen}
         >
-          {isOpen ? <FiX size={24} className="react-icon" /> : <FiMenu size={24} className="react-icon" />}
+          {isOpen ? <FiX size={28} className="react-icon" /> : <FiMenu size={28} className="react-icon" />}
         </button>
 
         {/* Mobile Menu */}
@@ -162,14 +162,14 @@ const Navbar = () => {
                 link.name === 'Services' ? (
                   <div key={index} className="w-full">
                     <button
-                      className="text-2xl text-ivory hover:text-gold-400 py-3 w-full text-center border-b border-royal-navy hover:border-gold-400 transition-all duration-300 flex items-center justify-center hover:scale-105 focus:outline-none focus:ring-2 focus:ring-gold-400 rounded-lg touch:min-h-12"
+                      className="text-2xl text-ivory hover:text-gold-400 py-4 w-full text-center border-b border-royal-navy hover:border-gold-400 transition-all duration-300 flex items-center justify-center hover:scale-105 focus:outline-none focus:ring-2 focus:ring-gold-400 rounded-lg touch:min-h-14 touch:active-scale-md touch:text-3xl"
                       onClick={() => setMobileServicesOpen(!mobileServicesOpen)}
                       data-aos="fade-up"
                       data-aos-delay={200 + index * 100}
                       aria-expanded={mobileServicesOpen}
                     >
                       {link.name}
-                      <FiChevronDown className={`ml-2 transition-transform duration-300 ${mobileServicesOpen ? 'rotate-180' : ''}`} />
+                      <FiChevronDown className={`ml-2 transition-transform duration-300 text-3xl ${mobileServicesOpen ? 'rotate-180' : ''}`} />
                     </button>
                     
                     {/* Mobile Services Dropdown */}
@@ -179,7 +179,7 @@ const Navbar = () => {
                           <Link
                             key={idx}
                             to={service.href}
-                            className="block py-3 text-lg text-ivory hover:text-gold-400 text-center border-b border-royal-navy hover:border-gold-400 transition-all duration-300 hover:scale-105 focus:outline-none focus:bg-royal-navy focus:text-gold-400 rounded-lg touch:min-h-12"
+                            className="block py-4 text-xl text-ivory hover:text-gold-400 text-center border-b border-royal-navy hover:border-gold-400 transition-all duration-300 hover:scale-105 focus:outline-none focus:bg-royal-navy focus:text-gold-400 rounded-lg touch:min-h-14 touch:active-scale-md"
                             onClick={() => {
                               setMobileServicesOpen(false);
                               setIsOpen(false);
@@ -195,7 +195,7 @@ const Navbar = () => {
                   <Link
                     key={index}
                     to={link.href}
-                    className="text-2xl text-ivory hover:text-gold-400 py-3 w-full text-center border-b border-royal-navy hover:border-gold-400 transition-all duration-300 hover:scale-105 focus:outline-none focus:ring-2 focus:ring-gold-400 rounded-lg touch:min-h-12"
+                    className="text-2xl text-ivory hover:text-gold-400 py-4 w-full text-center border-b border-royal-navy hover:border-gold-400 transition-all duration-300 hover:scale-105 focus:outline-none focus:ring-2 focus:ring-gold-400 rounded-lg touch:min-h-14 touch:active-scale-md touch:text-3xl"
                     onClick={() => setIsOpen(false)}
                     data-aos="fade-up"
                     data-aos-delay={200 + index * 100}
