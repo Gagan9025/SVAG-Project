@@ -3,14 +3,15 @@ import { Link } from 'react-router-dom';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import BackToTop from '../components/BackToTop';
-import { FiBox, FiCode, FiBarChart2, FiFilm, FiX, FiMonitor, FiSmartphone, FiTrendingUp, FiImage, FiGlobe, FiSearch, FiUsers, FiAward } from 'react-icons/fi';
+import { FiBox, FiCode, FiBarChart2, FiFilm, FiX, FiMonitor, FiSmartphone, FiTrendingUp, FiImage, FiGlobe, FiSearch, FiUsers, FiAward, FiArrowRight, FiCheck } from 'react-icons/fi';
 
 const AllServicesPage = () => {
   const [filteredServices, setFilteredServices] = useState(null);
 
   // Hero Section Data
   const heroData = {
-    title: "Transform Your Brand with Strategic Design",
+    title: "Comprehensive Digital Solutions",
+    subtitle: "Transform Your Brand with Strategic Design",
     description: "From digital consulting to graphic design, we craft solutions that don't just look good—they drive real business results. Every service is built on strategy, creativity, and measurable outcomes.",
     stats: [
       { value: "500+", label: "Projects Completed" },
@@ -112,28 +113,31 @@ const AllServicesPage = () => {
         <section className="py-20 relative">
           <div className="absolute inset-0 bg-gradient-to-b from-royal-blue to-royal-dark z-0"></div>
           <div className="container mx-auto px-4 relative z-10">
-            <div className="max-w-4xl mx-auto text-center mb-16 animate-fade-in-down">
-              <h1 className="text-4xl md:text-5xl font-extrabold mb-6 font-heading text-gold-400" data-aos="fade-up">
+            <div className="max-w-6xl mx-auto text-center mb-16 animate-fade-in-down">
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold mb-6 font-heading text-gold-400" data-aos="fade-up">
                 {heroData.title}
               </h1>
+              <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-8 font-heading text-ivory" data-aos="fade-up" data-aos-delay="100">
+                {heroData.subtitle}
+              </h2>
               <div className="flex justify-center my-6 animate-pulse-slow">
                 <div className="w-16 h-1 bg-gold-400 rounded-full"></div>
               </div>
-              <p className="text-xl md:text-2xl text-gold-300 mt-8 max-w-3xl mx-auto font-sans leading-relaxed animate-fade-in" data-aos="fade-up" data-aos-delay="200">
+              <p className="text-lg md:text-xl lg:text-2xl text-gold-300 mt-8 max-w-4xl mx-auto font-sans leading-relaxed animate-fade-in" data-aos="fade-up" data-aos-delay="200">
                 {heroData.description}
               </p>
               
               {/* Stats */}
-              <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mt-16 max-w-4xl mx-auto">
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mt-16 max-w-5xl mx-auto">
                 {heroData.stats.map((stat, index) => (
                   <div 
                     key={index}
-                    className="text-center animate-fade-in-up"
+                    className="text-center animate-fade-in-up bg-royal-navy/30 backdrop-blur-sm rounded-2xl p-6 border border-gold-400/20 hover:border-gold-400/50 transition-all duration-300 hover:scale-105"
                     data-aos="fade-up"
                     data-aos-delay={300 + index * 100}
                   >
-                    <div className="text-3xl md:text-4xl font-bold text-gold-400 mb-2">{stat.value}</div>
-                    <div className="text-silver-400">{stat.label}</div>
+                    <div className="text-3xl md:text-4xl lg:text-5xl font-bold text-gold-400 mb-2">{stat.value}</div>
+                    <div className="text-silver-400 text-sm md:text-base">{stat.label}</div>
                   </div>
                 ))}
               </div>
@@ -141,20 +145,20 @@ const AllServicesPage = () => {
           </div>
         </section>
 
-        {/* Quick Navigation Section */}
+        {/* Our Services Section */}
         <section className="py-16 relative">
           <div className="absolute inset-0 bg-gradient-to-b from-royal-dark to-royal-blue z-0"></div>
           <div className="container mx-auto px-4 relative z-10">
             <div className="text-center mb-12">
               <h2 className="text-3xl md:text-4xl font-extrabold mb-4 relative inline-block font-heading text-gold-400 animate-fade-in-down">
-                Quick Service Navigation
+                Our Services
                 <span className="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-gold-400 to-transparent"></span>
               </h2>
               <div className="flex justify-center my-4 animate-pulse">
                 <div className="w-8 h-1 bg-gold-400 rounded-full"></div>
               </div>
               <p className="text-xl text-gold-300 mt-4 max-w-3xl mx-auto font-sans animate-fade-in">
-                Jump directly to any service category
+                Comprehensive digital solutions tailored to your business needs
               </p>
             </div>
             
@@ -288,25 +292,25 @@ const AllServicesPage = () => {
         <section className="py-20 relative">
           <div className="absolute inset-0 bg-gradient-to-b from-royal-blue to-royal-dark z-0"></div>
           <div className="container mx-auto px-4 relative z-10">
-            <div className="max-w-4xl mx-auto text-center">
-              <h2 className="text-3xl md:text-4xl font-extrabold mb-6 font-heading text-gold-400 animate-fade-in-down" data-aos="fade-up">
+            <div className="max-w-5xl mx-auto text-center">
+              <h2 className="text-3xl md:text-4xl lg:text-5xl font-extrabold mb-6 font-heading text-gold-400 animate-fade-in-down" data-aos="fade-up">
                 {ctaData.title}
               </h2>
-              <p className="text-xl text-gold-300 mt-4 mb-8 max-w-2xl mx-auto font-sans animate-fade-in" data-aos="fade-up" data-aos-delay="100">
+              <p className="text-lg md:text-xl lg:text-2xl text-gold-300 mt-4 mb-8 max-w-4xl mx-auto font-sans leading-relaxed animate-fade-in" data-aos="fade-up" data-aos-delay="100">
                 {ctaData.description}
               </p>
               
               {/* Benefits */}
-              <div className="flex flex-wrap justify-center gap-4 mt-8 mb-12">
+              <div className="flex flex-wrap justify-center gap-6 mt-12 mb-16">
                 {ctaData.benefits.map((benefit, index) => (
                   <div 
                     key={index}
-                    className="px-6 py-3 rounded-full bg-royal-purple/50 border border-gold-400/30 text-ivory flex items-center animate-fade-in-up"
+                    className="px-8 py-4 rounded-full bg-royal-purple/50 border border-gold-400/30 text-ivory flex items-center animate-fade-in-up hover:bg-royal-purple/70 hover:border-gold-400/50 transition-all duration-300 hover:scale-105"
                     data-aos="fade-up"
                     data-aos-delay={200 + index * 100}
                   >
-                    <span className="text-gold-400 mr-2">✓</span>
-                    {benefit}
+                    <FiCheck className="text-gold-400 mr-3 text-lg" />
+                    <span className="font-semibold">{benefit}</span>
                   </div>
                 ))}
               </div>
@@ -314,9 +318,10 @@ const AllServicesPage = () => {
               <div className="mt-10 animate-fade-in-up" data-aos="fade-up" data-aos-delay="500">
                 <Link 
                   to="/contact" 
-                  className="btn-royal-gold px-8 py-4 text-lg inline-block hover:scale-105 transition-transform duration-300"
+                  className="btn-royal-gold px-10 py-5 text-lg lg:text-xl inline-flex items-center hover:scale-105 transition-transform duration-300"
                 >
                   START YOUR PROJECT
+                  <FiArrowRight className="ml-3 text-xl" />
                 </Link>
               </div>
             </div>
